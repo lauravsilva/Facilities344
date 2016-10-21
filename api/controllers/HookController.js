@@ -33,6 +33,7 @@ function hook(res, pageview, path) {
         // response available as `responseData` in `yourview`
         var data = JSON.parse(responseData);
         console.log(data); // TODO: Remove this eventually
+        console.log(pageview);
         res.locals.requestData = data;
       } catch (e) {
         sails.log.warn('Could not parse response from options.hostname: ' + e);
