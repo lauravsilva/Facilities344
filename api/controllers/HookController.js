@@ -5,7 +5,7 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-function hook(req, res, path) {
+function hook(res, pageview, path) {
   var http = require('http');
 
   var options = {
@@ -38,7 +38,7 @@ function hook(req, res, path) {
         sails.log.warn('Could not parse response from options.hostname: ' + e);
       }
 
-      return res.view('homepage', {
+      return res.view(pageview, {
         userObjects: data
       });
     });
@@ -47,13 +47,13 @@ function hook(req, res, path) {
 
 module.exports = {
   get_user_by_email: function (req, res) {
-    hook(req, res, '/api/Student.php?action=get_user_by_email&email=')
+    hook(res, 'homepage', '/api/User.php?action=get_user_by_email&email=' + req.param('email'))
   },
   get_user_by_id: function (req, res) {
-    hook(req, res, '/api/Student.php?action=get_user_by_id')
+    hook(res, 'userid', '/api/User.php?action=get_user_by_id&id=' + req.param('id'))
   },
-  get_instructor_by_class_id: function (req, res) {
-    hook(req, res, '/api/Student.php?action=get_instructor_by_class_id')
+  get_instructor_by_classid: function (req, res) {
+    hook(res, 'instructorclassid', '/api/Instructor.php?action=get_instructor_by_classid&id=' + req.param('id'))
   }
 };
 

@@ -36,16 +36,8 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  '/hi': 'HookController.test'
-
-  /***************************************************************************
-  *                                                                          *
-  * Custom routes here...                                                    *
-  *                                                                          *
-  * If a request to a URL doesn't match any of the custom routes above, it   *
-  * is matched against Sails route blueprints. See `config/blueprints.js`    *
-  * for configuration options and examples.                                  *
-  *                                                                          *
-  ***************************************************************************/
+  '/useremail': 'HookController.get_user_by_email',
+  '/userid': 'HookController.get_user_by_id',
+  '/instructorclassid' : 'HookController.get_instructor_by_classid'
 
 };
