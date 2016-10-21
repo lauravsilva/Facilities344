@@ -1,8 +1,28 @@
 <div>
-  <h1>UserID: <%= userObjects[0].UserID %></h1>
-  <h1>Email: <%= userObjects[0].Email %></h1>
-  <h1>Type: <%= userObjects[0].Type %></h1>
-  <h1>Firstname: <%= userObjects[0].Firstname %></h1>
-  <h1>Lastname: <%= userObjects[0].Lastname %></h1>
-  <h1>AuthToken: <%= userObjects[0].AuthToken %></h1>
+  <form id="formEmail" onsubmit="yourFunction('formEmail', 'useremail', 'email')"> Get User By Email:
+    <br>
+    <input type="text" name="email">
+    <br>
+    <input type="submit" value="Submit"> </form>
+
+  <form id="formUserId" onsubmit="yourFunction('formUserId', 'userid', 'id')"> Get User By Id:
+    <br>
+    <input type="text" name="id">
+    <br>
+    <input type="submit" value="Submit"> </form>
+
+  <form id="formInstructorClassId" onsubmit="yourFunction('formInstructorClassId', 'instructorclassid', 'id')"> Get Instructor By Class ID:
+    <br>
+    <input type="text" name="id">
+    <br>
+    <input type="submit" value="Submit"> </form>
 </div>
+
+<script>
+  function yourFunction(elementId, path, actionName){
+    var action_src = "http://facilities344.herokuapp.com/" + path + "?" + document.getElementsByName(actionName)[0].value;
+    var your_form = document.getElementById(elementId);
+    your_form.action = action_src ;
+  }
+</script>
+
