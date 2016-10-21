@@ -47,7 +47,7 @@ function hook(res, pageview, path) {
 
 module.exports = {
   get_user_by_email: function (req, res) {
-    hook(res, 'homepage', '/api/User.php?action=get_user_by_email&email=' + req.param('email'))
+    hook(res, 'email', '/api/User.php?action=get_user_by_email&email=' + req.param('email'))
   },
   get_user_by_id: function (req, res) {
     hook(res, 'userid', '/api/User.php?action=get_user_by_id&id=' + req.param('id'))
