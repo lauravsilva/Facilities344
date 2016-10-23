@@ -1,39 +1,38 @@
 <div>
-  <!-- Search for user by email -->
-  <form id="formEmail" onsubmit="translateFormAction('formEmail', 'useremail', 'email')"> Get User By Email:
-    <br>
-    <input type="text" name="email">
-    <br>
-    <input type="submit" value="Submit"></form>
-
-  <!-- Search for user by id -->
-  <form id="formUserId" onsubmit="translateFormAction('formUserId', 'userid', 'id')"> Get User By Id:
-    <br>
-    <input type="text" name="id">
-    <br>
-    <input type="submit" value="Submit"></form>
-
-  <!-- Search for instructor by class id -->
-  <form id="formInstructorClassId" onsubmit="translateFormAction('formInstructorClassId', 'instructorclassid', 'id')">
-    Get Instructor By Class ID:
-    <br>
-    <input type="text" name="id">
-    <br>
-    <input type="submit" value="Submit"></form>
+    <!-- Search for user by email -->
+    <form id="formEmail" onsubmit="translateFormAction('formEmail', 'useremail', 'email')" style="margin: 30px;"> Get User By Email:
+        <br>
+        <input type="email" name="email" placeholder="user@example.com">
+        <br>
+        <input type="submit" value="Submit"> </form>
+    <!-- Search for user by id -->
+    <form id="formUserId" onsubmit="translateFormAction('formUserId', 'userid', 'id')" style="margin: 30px;"> Get User By Id:
+        <br>
+        <input type="number" name="id" placeholder="1">
+        <br>
+        <input type="submit" value="Submit"> </form>
+    <!-- Search for instructor by class id -->
+    <form id="formInstructorClassId" onsubmit="translateFormAction('formInstructorClassId', 'instructorclassid', 'id')" style="margin: 30px;"> Get Instructor By Class ID:
+        <br>
+        <input type="number" name="id" placeholder="2">
+        <br>
+        <input type="submit" value="Submit"> </form>
 </div>
-
 <script>
-  /**
-   * Translate information from the form into a proper action that will trigger the API hook.
-   *
-   * @param formId The 'id' of the form that is calling this function
-   * @param path The path that will be used by 'routes.js'
-   * @param inputName The 'name' of the input field in the form
-   */
-  function translateFormAction(formId, path, inputName) {
-    var action_src = "http://facilities344.herokuapp.com/" + path + "?" + document.getElementsByName(inputName)[0].value;
-    var form = document.getElementById(formId);
-    form.action = action_src;
-  }
+    /**
+     * Translate information from the form into a proper action that will trigger the API hook.
+     *
+     * @param formId The 'id' of the form that is calling this function
+     * @param path The path that will be used by 'routes.js'
+     * @param inputName The 'name' of the input field in the form
+     */
+    function translateFormAction(formId, path, inputName) {
+        var inputVal = document.getElementsByName(inputName)[0].value;
+        if (inputVal == "" || inputVal == " ") {
+            return false;
+        }
+        var action_src = "http://facilities344.herokuapp.com/" + path + "?" + inputVal;
+        var form = document.getElementById(formId);
+        form.action = action_src;
+    }
 </script>
-
