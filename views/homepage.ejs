@@ -2,19 +2,19 @@
     <!-- Search for user by email -->
     <form id="formEmail" onsubmit="translateFormAction('formEmail', 'useremail', 'email')" style="margin: 30px;"> Get User By Email:
         <br>
-        <input type="email" name="email" placeholder="user@example.com">
+        <input type="email" name="email" value="user@example.com" required>
         <br>
         <input type="submit" value="Submit"> </form>
     <!-- Search for user by id -->
     <form id="formUserId" onsubmit="translateFormAction('formUserId', 'userid', 'id')" style="margin: 30px;"> Get User By Id:
         <br>
-        <input type="number" name="id" placeholder="1">
+        <input type="number" name="id" value="1" required>
         <br>
         <input type="submit" value="Submit"> </form>
     <!-- Search for instructor by class id -->
     <form id="formInstructorClassId" onsubmit="translateFormAction('formInstructorClassId', 'instructorclassid', 'id')" style="margin: 30px;"> Get Instructor By Class ID:
         <br>
-        <input type="number" name="id" placeholder="2">
+        <input type="number" name="id" value="2" required>
         <br>
         <input type="submit" value="Submit"> </form>
 </div>
@@ -25,14 +25,20 @@
      * @param formId The 'id' of the form that is calling this function
      * @param path The path that will be used by 'routes.js'
      * @param inputName The 'name' of the input field in the form
+     * @param param url parameter
      */
+    //userid?id=2;
     function translateFormAction(formId, path, inputName) {
         var inputVal = document.getElementsByName(inputName)[0].value;
-        if (inputVal == "" || inputVal == " ") {
-            return false;
-        }
-        var action_src = "http://facilities344.herokuapp.com/" + path + "?" + inputVal;
         var form = document.getElementById(formId);
+        var action_src = "";
+        if (inputVal == "" || inputVal == " ") {
+            form.action = "http://facilities344.herokuapp.com/";
+        }
+        else {
+            //        var action_src = "http://facilities344.herokuapp.com/" + path + "?" + inputVal;
+            action_src = "http://facilities344.herokuapp.com/" + path + "?" + inputName + "=" + inputVal;
+        }
         form.action = action_src;
     }
 </script>

@@ -22,10 +22,12 @@
         , "rc": "1.0.1"
         , "sails": "~0.12.7"
         , "sails-disk": "~0.10.9"
+        , "expect.js": "0.3.1"
+        , "supertest": "2.0.1"
     }
     , "scripts": {
-        "start": "sails lift --models.migrate='safe'", 
-        "debug": "node debug app.js"
+        "start": "sails lift --models.migrate='safe'"
+        , "debug": "node debug app.js"
         , "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
     }
     , "main": "app.js"

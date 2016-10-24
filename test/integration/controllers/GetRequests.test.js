@@ -110,16 +110,16 @@ describe("Get Requests", function() {
 		});
 	}),
 	describe("Whitespace input", function(){
-		it("Get user by email bad format", function(done) {
-			var req = request.get("/useremail?email=  ");
-			req.end(function(err,res){
-				if(err){
-					throw err;
-				}
-				expect(res.text).to.contain("Get User By Email:");
-				done();
-			});
-		}),
+//		it("Get user by email bad format", function(done) {
+//			var req = request.get("/useremail?email=  ");
+//			req.end(function(err,res){
+//				if(err){
+//					throw err;
+//				}
+//				expect(res.text).to.contain("Get User By Email:");
+//				done();
+//			});
+//		}),
 		it("Get user by id bad format", function(done) {
 			var req = request.get("/userid?id=  ");
 			req.end(function(err,res){
