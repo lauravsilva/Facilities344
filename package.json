@@ -24,8 +24,9 @@
         , "sails-disk": "~0.10.9"
     }
     , "scripts": {
-        "start": "sails lift"
-        , "debug": "node debug app.js"
+        "start": "sails lift --models.migrate='safe'", 
+        "debug": "node debug app.js"
+        , "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
     }
     , "main": "app.js"
     , "repository": {
@@ -34,4 +35,7 @@
     }
     , "author": "lauravsilva"
     , "license": ""
+    , "devDependencies": {
+        "mocha": "^3.1.2"
+    }
 }
