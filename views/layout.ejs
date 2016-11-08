@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%=typeof title == 'undefined' ? 'Facilities Sails App' : title%></title>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        <%=typeof title == 'undefined' ? 'Facilities Sails App' : title%>
+    </title>
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
     <!--
         Stylesheets and Preprocessors
         ==============================
@@ -27,18 +29,15 @@
             + Import stylesheets from other directories
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
-
     <!--STYLES-->
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
-  </head>
+</head>
 
-  <body>
+<body>
     <%- body %>
-
-
-
-    <!--
+        <!--
         Client-side Templates
         ========================
 
@@ -58,13 +57,10 @@
             + Internationalize your client-side templates using a server-side
               stringfile before they're served.
     -->
-
-    <!--TEMPLATES-->
-    
-    <!--TEMPLATES END-->
-
-
-    <!--
+        <!--TEMPLATES-->
+        
+        <!--TEMPLATES END-->
+        <!--
 
       Client-side Javascript
       ========================
@@ -86,9 +82,11 @@
           + Use a different preprocessor, like TypeScript
 
     -->
+        <!--SCRIPTS-->
+        <script src="/js/dependencies/sails.io.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/bootstrap/bootstrap.min.js"></script>
+        <!--SCRIPTS END-->
+</body>
 
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <!--SCRIPTS END-->
-  </body>
 </html>

@@ -19,25 +19,32 @@
  * For more information on configuring custom routes, check out:
  * http://sailsjs.org/#!/documentation/concepts/Routes/RouteTargetSyntax.html
  */
-
 module.exports.routes = {
-
-  /***************************************************************************
-  *                                                                          *
-  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-  * etc. depending on your default view engine) your home page.              *
-  *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
-  * `assets` directory)                                                      *
-  *                                                                          *
-  ***************************************************************************/
-
-  '/': {
-    view: 'homepage'
-  },
-
-  '/useremail': 'HookController.get_user_by_email',
-  '/userid': 'HookController.get_user_by_id',
-  '/instructorclassid' : 'HookController.get_instructor_by_classid'
-
+    /***************************************************************************
+     *                                                                          *
+     * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
+     * etc. depending on your default view engine) your home page.              *
+     *                                                                          *
+     * (Alternatively, remove this and add an `index.html` file in your         *
+     * `assets` directory)                                                      *
+     *                                                                          *
+     ***************************************************************************/
+    '/': {
+        view: 'index'
+    }
+    , 'get /reservations': {
+        view: 'reservations'
+    }
+    , 'get /devices': {
+        view: 'devices'
+    }
+    , 'get /account': {
+        view: 'account'
+    }
+    , 'get /dashboard': {
+        view: 'home'
+    }
+    , '/useremail': 'HookController.get_user_by_email'
+    , '/userid': 'HookController.get_user_by_id'
+    , '/instructorclassid': 'HookController.get_instructor_by_classid'
 };

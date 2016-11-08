@@ -14,5 +14,34 @@
  * or any other Grunt tasks you like.)
  */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica";
+}
+.navbar {
+  background: #CCBA89;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #8E7D76;
+}
+.navbar-default .navbar-nav > .active a {
+  color: #BA554A;
+}
+.btn-primary {
+  color: white;
+  background-color: #D58453;
+  border-color: #D58453;
+}
+.btn-primary:link {
+  background-color: #BA554A;
+  border-color: #BA554A;
+}
+.btn-primary:hover {
+  background-color: #654A42;
+  border-color: #654A42;
+}
+.btn-primary:active {
+  background-color: #BA554A;
+  border-color: #BA554A;
+}
+.jumbotron {
+  background: #BA554A;
 }

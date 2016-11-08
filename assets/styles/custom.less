@@ -1,0 +1,47 @@
+body {
+    font-family: @header-font;
+}
+
+
+.navbar {
+    background: @sorrell-brown;
+}
+
+.navbar-default {
+    .navbar-nav {
+        &>li {
+            &>a {
+                color: @americano;
+            }
+        }
+        &>.active {
+            a {
+                color: @chestnut;
+            }
+        }
+    }
+}
+
+.btn-primary {
+    color: white;
+    background-color: @raw-sienna;
+    border-color: @raw-sienna;
+    &:link {
+        background-color: @chestnut;
+        border-color: @chestnut;
+    }
+    &:hover {
+        background-color: @kabul;
+        border-color: @kabul;
+    }
+    &:active {
+        background-color: @chestnut;
+        border-color: @chestnut;
+    }
+}
+
+.jumbotron {
+    background: @chestnut;
+}
+
+footer {}
