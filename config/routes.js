@@ -32,6 +32,9 @@ module.exports.routes = {
     '/': {
         view: 'index'
     }
+    , 'get /index': {
+        view: 'index'
+    }
     , 'get /reservations': {
         view: 'reservations'
     }
