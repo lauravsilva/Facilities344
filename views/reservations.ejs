@@ -17,17 +17,17 @@
         <h1>Reservations <small>Find items to reserve</small></h1> </div>
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-3">
-            <div class="thumbnail"> <img src="img/placeholder.svg" alt="...">
+            <div class="thumbnail"> <img src="img/laptop_placeholder.png" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
+                    <h3>Device to Reserve</h3>
                     <p>...</p>
                     <p><a href="#" class="btn btn-primary" role="button">Reserve</a> </div>
             </div>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-3">
-            <div class="thumbnail"> <img src="img/placeholder.svg" alt="...">
+            <div class="thumbnail"> <img src="img/classroom_placeholder.png" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
+                    <h3>Classroom to Reserve</h3>
                     <p>...</p>
                     <p><a href="#" class="btn btn-primary" role="button">Reserve</a> </div>
             </div>
@@ -50,3 +50,13 @@
         </div>
     </div>
 </div>
+
+
+<script>
+  function classroom( building, room, capacity, reserved ){
+    this.building = building;
+    this.room = room;
+    this.capacity = capacity;
+    this.reserved = reserved;
+  }
+</script>
