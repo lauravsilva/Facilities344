@@ -38,6 +38,9 @@ module.exports.routes = {
     , 'get /reservations': {
         view: 'reservations'
     }
+    , 'get /reservations-admin': {
+        view: 'reservations-admin'
+    }
     , 'get /devices': {
         view: 'devices'
     }
@@ -53,8 +56,14 @@ module.exports.routes = {
     , 'get /account': {
         view: 'account'
     }
+    , 'get /account-admin': {
+        view: 'account-admin'
+    }
     , 'get /dashboard': {
         view: 'home'
+    }
+    , 'get /admin': {
+        view: 'admin'
     }
     , '/useremail': 'HookController.get_user_by_email'
     , '/userid': 'HookController.get_user_by_id'
