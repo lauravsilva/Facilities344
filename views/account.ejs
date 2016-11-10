@@ -1,3 +1,7 @@
+<head>
+  <script src="/js/jquery.min.js"></script>
+</head>
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -37,7 +41,8 @@
                   <td>New</td>
                   <!-- Return Device Button -->
                   <td>
-                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Return</button>
+                    <button type="button" class="open-returndevice btn btn-info btn-sm" data-toggle="modal"
+                            data-target="#returnDevice" data-device-name="Laptop">Return</button>
                   </td>
                 </tr>
                 <tr>
@@ -46,7 +51,8 @@
                   <td>1/1/16</td>
                   <td>Screen Scratched</td>
                   <td>
-                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Return</button>
+                    <button type="button" class="open-returndevice btn btn-info btn-sm" data-toggle="modal"
+                            data-target="#returnDevice" data-device-name="Kindle">Return</button>
                   </td>
                 </tr>
               </tbody>
@@ -54,3 +60,33 @@
         </div>
     </div>
 </div>
+
+
+<!-- Return Modal -->
+<div id="returnDevice" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Return Device</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are returning a device.</p>
+        <input type="text" name="deviceName" id="deviceName" value="deviceName" readonly/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  $(document).on("click", ".open-returndevice", function() {
+      var deviceName = $(this).data('device-name');
+      $(".modal-body #deviceName").val(deviceName);
+  });
+</script>
