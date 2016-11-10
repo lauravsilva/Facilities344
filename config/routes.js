@@ -44,6 +44,12 @@ module.exports.routes = {
     , 'get /devices-admin': {
         view: 'devices-admin'
     }
+    , 'get /classrooms': {
+        view: 'classrooms'
+    }
+    , 'get /classrooms-admin': {
+        view: 'classrooms-admin'
+    }
     , 'get /account': {
         view: 'account'
     }
