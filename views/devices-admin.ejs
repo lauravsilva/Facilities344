@@ -1,0 +1,98 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="dashboard">Facilities</a> </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="reservations">Reservations</a></li>
+        <li class="active"><a href="">Devices</a></li>
+        <li><a href="account">Account</a></li>
+        <li><a href="">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="page-header">
+    <h1>Devices <small>All devices available</small></h1> </div>
+  <div class="row"/>
+  <div class="col-sm-12">
+    <p>This will show a full list of devices</p>
+  </div>
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Condition</th>
+      <th>Reserved</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td>ChromeBook1</td>
+        <td>Chrome Book</td>
+        <td>New</td>
+        <td>False</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#addDeviceModal">Add New Device</button>
+
+  <!-- Modal -->
+  <div id="addDeviceModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal Content -->
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">x</button>
+          <h3 class="modal-title">Add a New Device</h3>
+        </div>
+
+        <div class="modal-body">
+          <form onsubmit="console.log('Name: '+document.getElementById('deviceName').value+' Model: '+document.getElementById('deviceModel').value+' Condition: '+document.getElementById('deviceCondition').value)">
+
+            <div class="form-group">
+              <label for="deviceName">Device Name</label>
+              <input required type="text" class="form-control" id="deviceName" placeholder="Enter Device Name.">
+            </div>
+
+            <div class="form-group">
+              <label for="deviceModel">Device Model</label>
+              <input required type="text" class="form-control" id="deviceModel" placeholder="Enter Device Model.">
+            </div>
+
+            <div class="form-group">
+              <label for="deviceCondition">Device Condition</label>
+              <select class="form-control" id="deviceCondition">
+                <option selected>Choose one.</option>
+                <option value="likeNew">Like New</option>
+                <option value="good">Good</option>
+                <option value="acceptable">Acceptable</option>
+                <option value="damaged">Damaged</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-info">Add Device</button>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function device( name, model, condition, reserved ) {
+    this.name = name;
+    this.model = model;
+    this.condition = condition;
+    this.reserved = reserved;
+  }
+</script>
