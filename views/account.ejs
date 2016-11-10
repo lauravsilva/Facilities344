@@ -20,7 +20,37 @@
             <p>This side will have account info</p>
         </div>
         <div class="col-sm-12 col-md-6">
-            <p>This side will have currently reserved devices/rooms/link to class schedule or something</p>
+            <h2>Reserved Devices</h2>
+            <table class="table table-striped">
+              <thead class="th active">
+                <th>Device Name</th>
+                <th>Quantity</th>
+                <th>Date Reserved</th>
+                <th>Reserve Condition</th>
+                <th></th>
+              </thead>
+              <tbody class="tb active">
+                <tr>
+                  <td>Laptop</td>
+                  <td>1</td>
+                  <td>1/1/16</td>
+                  <td>New</td>
+                  <!-- Return Device Button -->
+                  <td>
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Return</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Kindle</td>
+                  <td>1</td>
+                  <td>1/1/16</td>
+                  <td>Screen Scratched</td>
+                  <td>
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Return</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
         </div>
     </div>
 </div>
