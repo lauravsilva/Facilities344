@@ -32,6 +32,7 @@ var jsFilesToInject = [
   // will be injected here in no particular order.
 'js/**/*.js'
     , 'bootstrap/*.js'
+    , 'https://apis.google.com/js/client:platform.js?onload=startApp'
 ];
 // Client-side HTML templates are injected using the sources below
 // The ordering of these templates shouldn't matter.
