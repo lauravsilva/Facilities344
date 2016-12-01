@@ -13,35 +13,103 @@
  * always omit, customize, or replace this behavior with SASS, SCSS,
  * or any other Grunt tasks you like.)
  */
-body {
-  font-family: "Helvetica";
-}
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:700|Source+Sans+Pro:400,700');
 .navbar {
-  background: #CCBA89;
+  background: #A9A9A9;
+}
+.navbar-default {
+  border: none;
+  border-radius: 0;
+}
+.navbar-default .navbar-brand {
+  color: #CAEBF2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 150%;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #8E7D76;
+  color: #FBFDFD;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #CAEBF2;
 }
 .navbar-default .navbar-nav > .active a {
-  color: #BA554A;
+  color: #FF3B3F;
+  background-color: #FBFDFD;
 }
-.btn-primary {
-  color: white;
-  background-color: #D58453;
-  border-color: #D58453;
+.table > thead > tr > th {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 120%;
 }
-.btn-primary:link {
-  background-color: #BA554A;
-  border-color: #BA554A;
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #FBFDFD;
 }
-.btn-primary:hover {
-  background-color: #654A42;
-  border-color: #654A42;
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #545454;
+  background: #FBFDFD;
 }
-.btn-primary:active {
-  background-color: #BA554A;
-  border-color: #BA554A;
+h1,
+h2,
+h3,
+h4,
+h5,
+.jumbotron h1 {
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #FF3B3F;
+}
+h1 {
+  color: #FF3B3F;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+a {
+  color: #A9A9A9;
+}
+a:hover {
+  color: #FF3B3F;
+}
+.btn {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 10px auto;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 3px solid #A9A9A9;
+  color: #A9A9A9;
+  box-sizing: border-box;
+  width: 100%;
+}
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn:hover,
+.btn:active {
+  color: #FF3B3F;
+  border-color: #FF3B3F;
+}
+.btn:focus {
+  color: #CAEBF2;
+  border-color: #CAEBF2;
 }
 .jumbotron {
-  background: #BA554A;
+  background: #CAEBF2;
 }

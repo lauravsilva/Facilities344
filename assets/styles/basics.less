@@ -1,0 +1,93 @@
+body {
+    font-family: @body-font;
+    color: @neutral;
+    background: @lightgray;
+}
+
+//Headers
+h1,
+h2,
+h3,
+h4,
+h5,
+.jumbotron h1 {
+    font-family: @header-font;
+    color: @watermelon;
+}
+
+h1 {
+    color: @watermelon;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+//Links
+a {
+    color: @carbon;
+    &:hover {
+        color: @watermelon;
+    }
+}
+
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 10px auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 3px solid @carbon;
+    color: @carbon;
+    box-sizing: border-box;
+    width: 100%;
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    &:hover, &:active {
+        color: @watermelon;
+        border-color: @watermelon;
+    }
+    &:focus{
+        color: @sky;
+        border-color: @sky;
+    }
+}
+
+//Buttons
+//.btn-primary {
+//    color: white;
+//    background-color: @raw-sienna;
+//    border-color: @raw-sienna;
+//    &:link {
+//        background-color: @chestnut;
+//        border-color: @chestnut;
+//    }
+//    &:hover {
+//        background-color: @kabul;
+//        border-color: @kabul;
+//    }
+//    &:active {
+//        background-color: @chestnut;
+//        border-color: @chestnut;
+//    }
+//}
+
+.jumbotron {
+    background: @sky;
+}

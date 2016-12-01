@@ -1,47 +1,43 @@
-body {
-    font-family: @header-font;
-}
-
-
 .navbar {
-    background: @sorrell-brown;
+    background: @carbon;
 }
 
 .navbar-default {
+    border: none;
+    border-radius: 0;
+    .navbar-brand {
+        color: @sky;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 150%;
+    }
     .navbar-nav {
         &>li {
             &>a {
-                color: @americano;
+                color: @lightgray;
+                &:hover {
+                    color: @sky;
+                }
             }
         }
         &>.active {
             a {
-                color: @chestnut;
+                color: @watermelon;
+                background-color: @lightgray;
             }
         }
     }
 }
 
-.btn-primary {
-    color: white;
-    background-color: @raw-sienna;
-    border-color: @raw-sienna;
-    &:link {
-        background-color: @chestnut;
-        border-color: @chestnut;
-    }
-    &:hover {
-        background-color: @kabul;
-        border-color: @kabul;
-    }
-    &:active {
-        background-color: @chestnut;
-        border-color: @chestnut;
-    }
+
+.table>thead>tr>th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 120%;
 }
 
-.jumbotron {
-    background: @chestnut;
+.table-striped>tbody>tr:nth-of-type(odd){
+    background-color: @lightgray;
 }
 
 footer {}
