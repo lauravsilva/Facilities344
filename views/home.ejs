@@ -19,18 +19,38 @@
         <p>This will be the dashboard, what the user sees after login</p>
     </div>
     <div class="row">
-
         <div class="col-md-6">
-
-
+            <% if (userObjects[0].hasOwnProperty("StudentID")){for(var i=0; i < userObjects.length; i++) { %>
+                <p>StudentID:
+                    <%= userObjects[i].StudentID %>
+                </p>
+                <p>UserID:
+                    <%= userObjects[i].UserID %>
+                </p>
+                <p>TranscriptID:
+                    <%= userObjects[i].TranscriptID %>
+                </p>
+                <p>ExpectedGradYear:
+                    <%= userObjects[i].ExpectedGradYear %>
+                </p>
+                <br/>
+                <br/>
+                <% }} %>
         </div>
-
         <div class="col-md-6">
-
-            
-            
-
+            <% if (userObjects[0].hasOwnProperty("InstructorID")){for(var i=0; i < userObjects.length; i++) { %>
+                <p>InstructorID:
+                    <%= userObjects[i].InstructorID %>
+                </p>
+                <p>UserID:
+                    <%= userObjects[i].UserID %>
+                </p>
+                <p>DepartmentID:
+                    <%= userObjects[i].DepartmentID %>
+                </p>
+                <br/>
+                <br/>
+                <% }} %>
         </div>
-
     </div>
 </div>

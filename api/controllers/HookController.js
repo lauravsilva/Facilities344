@@ -26,8 +26,8 @@ function hook(res, pageview, path) {
             try {
                 // response available as `responseData` in `yourview`
                 var data = JSON.parse(responseData);
-                console.log(data); // TODO: Remove this eventually
-                console.log(pageview);
+//                console.log(data); // TODO: Remove this eventually
+//                console.log(pageview);
                 res.locals.requestData = data;
             }
             catch (e) {
@@ -48,5 +48,11 @@ module.exports = {
     }
     , get_instructor_by_classid: function (req, res) {
         hook(res, 'instructorclassid', '/api/Instructor.php?action=get_instructor_by_classid&id=' + req.param('id'))
+    }
+    , get_all_instructors: function (req, res) {
+        hook(res, 'home', '/api/Instructor.php?action=get_all_instructors')
+    }
+    , get_all_students: function (req, res) {
+        hook(res, 'home', '/api/Student.php?action=get_all_students')
     }
 };
