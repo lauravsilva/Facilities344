@@ -2,6 +2,12 @@
     background: @carbon;
 }
 
+.navbar-collapse {
+    .collapse {
+        display: block;
+    }
+}
+
 .navbar-default {
     border: none;
     border-radius: 0;
@@ -29,14 +35,13 @@
     }
 }
 
-
 .table>thead>tr>th {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 120%;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd){
+.table-striped>tbody>tr:nth-of-type(odd) {
     background-color: @lightgray;
 }
 

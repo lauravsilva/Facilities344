@@ -17,6 +17,9 @@
 .navbar {
   background: #A9A9A9;
 }
+.navbar-collapse .collapse {
+  display: block;
+}
 .navbar-default {
   border: none;
   border-radius: 0;

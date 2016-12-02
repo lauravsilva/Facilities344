@@ -61,15 +61,16 @@ module.exports.routes = {
     }
     , 'get /dashboard': {
         view: 'home'
-    , }
+        , locals: {
+            userObjects: ''
+        }
+    }
     , 'get /admin': {
         view: 'admin'
     }
     , '/email': 'HookController.get_user_by_email'
     , '/userid': 'HookController.get_user_by_id'
     , '/instructorclassid': 'HookController.get_instructor_by_classid'
-    
     , '/getallstudents': 'HookController.get_all_students'
-    , '/getallinstructors':
-    'HookController.get_all_instructors'
+    , '/getallinstructors': 'HookController.get_all_instructors'
 };

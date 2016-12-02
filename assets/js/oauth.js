@@ -14,6 +14,7 @@ var helper = (function () {
                 var id_token = authResult.currentUser.get().getAuthResponse().id_token;
                 console.log("id_token: " + id_token);
                 $('#authOps').show();
+                $('#navbar').show();
                 $('#gConnect').hide();
                 helper.profile(access_token);
             }
@@ -25,6 +26,7 @@ var helper = (function () {
                 }
                 $('#authResult').append('Logged out');
                 $('#authOps').hide();
+                $('#navbar').attr('style','display:none !important');
                 $('#gConnect').show();
             }
         }
@@ -37,9 +39,8 @@ var helper = (function () {
             }).then(function (res) {
                 var profile = res.result;
                 $('#profile').empty();
-//                $('#profile').append($('<button onclick="getUserInfoFromToken(\'' + access_token + '\')">GetToken</button>'));
                 $('#profile').append($('<p><img src=\"' + profile.image.url + '\"></p>'));
-                $('#profile').append($('<p><em>Name: </em>' + profile.displayName + '<br /><em>Tagline: </em>' + profile.tagline + '</p>'));
+                $('#profile').append($('<p><strong>Name: </strong>' + profile.displayName + '<br /><strong>Tagline: </strong>' + profile.tagline + '</p>'));
                 if (profile.emails) {
                     $('#profile').append('Emails: ');
                     for (var i = 0; i < profile.emails.length; i++) {
