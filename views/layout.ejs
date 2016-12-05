@@ -37,7 +37,7 @@
     <!--STYLES END-->
 </head>
 
-<body>
+<body onload="weather.getWeather();">
     <%- body %>
         <!--
         Client-side Templates
@@ -88,6 +88,7 @@
         <script src="/js/dependencies/sails.io.js"></script>
         <script src="/js/jquery.min.js"></script>
         <script src="/js/oauth.js"></script>
+        <script src="/js/weather.js"></script>
         <script src="/bootstrap/bootstrap.min.js"></script>
         <!--SCRIPTS END-->
         <script src="https://apis.google.com/js/client:platform.js?onload=startApp"></script>
