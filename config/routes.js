@@ -43,6 +43,9 @@ module.exports.routes = {
     }
     , 'get /devices': {
         view: 'devices'
+          , locals: {
+              userObjects: ''
+          }
     }
     , 'get /devices-admin': {
         view: 'devices-admin'
@@ -73,4 +76,7 @@ module.exports.routes = {
     , '/instructorclassid': 'HookController.get_instructor_by_classid'
     , '/getallstudents': 'HookController.get_all_students'
     , '/getallinstructors': 'HookController.get_all_instructors'
+
+    //Device calls
+    , '/getalldevices': 'HookController.get_all_devices'
 };

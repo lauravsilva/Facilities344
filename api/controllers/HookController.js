@@ -103,8 +103,7 @@ module.exports = {
         hookLocal(res, 'devices', '/api/Devices.php?action=get_device_by_id&deviceid=' + req.param('deviceid'))
     }
     , create_device: function (req, res) {
-        hookLocal(res, 'devices', '/api/Devices.php?action=create_device&deviceid='
-          + req.param('deviceid') + '&devicemodel=' + req.param('devicemodel')
+        hookLocal(res, 'devices', '/api/Devices.php?action=create_device&devicemodel=' + req.param('devicemodel')
           + '&devicecondition=' + req.param('devicecondition') + '&devicename=' + req.param('devicename'))
     }
     , update_device: function (req, res) {
@@ -121,8 +120,7 @@ module.exports = {
         hookLocal(res, 'classrooms', '/api/Classroom.php?action=get_classroom_by_id&classroomid=' + req.param('classroomid'))
     }
     , create_classroom: function (req, res) {
-        hookLocal(res, 'classroom', '/api/Classroom.php?action=create_classroom&classroomid=' + req.param('classroomid')
-          + '&building=' + req.param('building') + '&roomnumber=' + req.param('roomnumber')
+        hookLocal(res, 'classroom', '/api/Classroom.php?action=create_classroom&building=' + req.param('building') + '&roomnumber=' + req.param('roomnumber')
           + '&capacity=' + req.param('capacity'))
     }
     , update_classroom: function (req, res) {
@@ -139,8 +137,7 @@ module.exports = {
         hookLocal(res, 'reservations', '/api/DeviceReservation.php?action=get_device_reservation_by_id&devicereservationid=' + req.param('devicereservationid'))
     }
     , create_device_reservation: function (req, res) {
-        hookLocal(res, 'reservations', '/api/DeviceReservation.php?action=create_device_reservation&devicereservationid=' + req.param('devicereservationid')
-          + '&userid=' + req.param('userid') + '&startdate' + req.param('startdate') + '&enddate=' + req.param('enddate'))
+        hookLocal(res, 'reservations', '/api/DeviceReservation.php?action=create_device_reservation&userid=' + req.param('userid') + '&startdate' + req.param('startdate') + '&enddate=' + req.param('enddate'))
     }
     , update_device_reservation: function (req, res) {
         hookLocal(res, 'reservations', '/api/DeviceReservation.php?action=update_device_reservation&devicereservationid=' + req.param('devicereservationid')
@@ -155,15 +152,14 @@ module.exports = {
         hookLocal(res, 'reservations', '/api/ClassReservation.php?action=get_class_reservation_by_id&classreservationid=' + req.param('classreservationid'))
     }
     , create_class_reservation: function (req, res) {
-        hookLocal(res, 'reservations', '/api/ClassReservation.php?action=create_class_reservation&classreservationid=' + req.param('classreservationid')
-          + '&instructorid=' + req.param('instructorid') + '&classid=' + req.param('classid') + '&startdate=' + req.param('startdate')
+        hookLocal(res, 'reservations', '/api/ClassReservation.php?action=create_class_reservation&instructorid=' + req.param('instructorid') + '&classid=' + req.param('classid') + '&startdate=' + req.param('startdate')
           + '&enddate=' + req.param('enddate') + '&classroomid=' + req.param('classroomid'))
     }
     , update_class_reservation: function (req, res) {
         hookLocal(res, 'reservations', '/api/ClassReservation.php?action=update_class_reservation&classreservationid=' + req.param('classreservationid')
           + '&instructorid=' + req.param('instructorid') + '&classid=' + req.param('classid') + '&startdate=' + req.param('startdate')
-          + '&enddate=' + req.param('enddate') + '&classroomid=' + req.param('classroomid'))
-    }
+        + '&enddate=' + req.param('enddate') + '&classroomid=' + req.param('classroomid'))
+  }
 
 
 

@@ -39,3 +39,28 @@
           </table>
     </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <% if (userObjects){
+      if (userObjects[0].hasOwnProperty("DeviceID")){for(var i=0; i < userObjects.length; i++) { %>
+      <h2>get_all_devices</h2>
+      <p>DeviceID:
+        <%= userObjects[i].DeviceID %>
+      </p>
+      <p>Device Model:
+        <%= userObjects[i].DeviceModel %>
+      </p>
+      <p>Device Condition:
+        <%= userObjects[i].DeviceCondition %>
+      </p>
+      <p>Device Name:
+        <%= userObjects[i].DeviceName %>
+      </p>
+      <br/>
+      <br/>
+      <% }}} %>
+    </div>
+  </div>
+</div>
