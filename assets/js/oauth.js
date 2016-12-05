@@ -1,4 +1,4 @@
-var auth2 = {};
+/*var auth2 = {};
 var helper = (function () {
     return {
         /**
@@ -7,7 +7,7 @@ var helper = (function () {
          * @param {Object} authResult An Object which contains the access token and
          *   other authentication information.
          */
-        onSignInCallback: function (authResult) {
+        /*onSignInCallback: function (authResult) {
             if (authResult.isSignedIn.get()) {
                 var access_token = authResult.currentUser.get().getAuthResponse().access_token;
                 console.log("access_token: " + access_token);
@@ -33,7 +33,7 @@ var helper = (function () {
         , /**
          * Gets and renders the currently signed in user's profile data.
          */
-        profile: function (access_token) {
+        /*profile: function (access_token) {
             gapi.client.plus.people.get({
                 'userId': 'me'
             }).then(function (res) {
@@ -62,7 +62,7 @@ var helper = (function () {
 /**
  * jQuery initialization
  */
-$(document).ready(function () {
+/*$(document).ready(function () {
     $('#loaderror').hide();
     if ($('meta')[0].content == 'YOUR_CLIENT_ID') {
         alert('This sample requires your OAuth credentials (client ID) ' + 'from the Google APIs console:\n' + '    https://code.google.com/apis/console/#:access\n\n' + 'Find and replace YOUR_CLIENT_ID with your client ID.');
@@ -73,7 +73,7 @@ $(document).ready(function () {
  *
  * @param {boolean} isSignedIn The new signed in state.
  */
-var updateSignIn = function () {
+/*ar updateSignIn = function () {
     console.log('update sign in state');
     if (auth2.isSignedIn.get()) {
         helper.onSignInCallback(gapi.auth2.getAuthInstance());
@@ -101,7 +101,7 @@ function getUserInfoFromToken(accessToken) {
 /**
  * This method sets up the sign-in listener after the client library loads.
  */
-function startApp() {
+/*function startApp() {
     gapi.load('auth2', function () {
         gapi.client.load('plus', 'v1').then(function () {
             gapi.signin2.render('signin-button', {
