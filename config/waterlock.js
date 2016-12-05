@@ -13,7 +13,7 @@ module.exports.waterlock = {
   //
   // used by auth methods for callback URI's using oauth and for password
   // reset links.
-  baseUrl: 'facilities344.herokuapp.com',
+  baseUrl: 'http://facilities344.herokuapp.com',
 
   // Auth Method(s)
   //
