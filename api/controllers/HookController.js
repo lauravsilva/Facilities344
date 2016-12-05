@@ -91,7 +91,7 @@ module.exports = {
         hookGlobal(res, 'home', '/api/Instructor.php?action=get_all_instructors')
     }
     , get_all_students: function (req, res) {
-        console.log(process.env);
+        console.log(sails.getBaseUrl());
         hookGlobal(res, 'home', '/api/Student.php?action=get_all_students')
     }
 
