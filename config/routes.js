@@ -73,4 +73,5 @@ module.exports.routes = {
     , '/instructorclassid': 'HookController.get_instructor_by_classid'
     , '/getallstudents': 'HookController.get_all_students'
     , '/getallinstructors': 'HookController.get_all_instructors'
+    , '/logout': 'UserController.logout'
 };

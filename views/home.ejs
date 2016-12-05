@@ -8,7 +8,7 @@
                 <li><a href="devices">Devices</a></li>
                 <li><a href="classrooms">Classrooms</a></li>
                 <li><a href="account">Account</a></li>
-                <li><a href="" id="signOut" onclick="auth2.signOut()">Logout</a></li>
+                <li><a href="/logout">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -41,13 +41,13 @@
         <div class="col-md-6">
             <% if (userObjects[0].hasOwnProperty("InstructorID")){for(var i=0; i < userObjects.length; i++) { %>
                 <p>InstructorID:
-                    <%= userObjects[i].InstructorID %>
+                    <%= userObjects.get_all_students[i].InstructorID %>
                 </p>
                 <p>UserID:
-                    <%= userObjects[i].UserID %>
+                    <%= userObjects.get_all_students[i].UserID %>
                 </p>
                 <p>DepartmentID:
-                    <%= userObjects[i].DepartmentID %>
+                    <%= userObjects.get_all_students[i].DepartmentID %>
                 </p>
                 <br/>
                 <br/>
