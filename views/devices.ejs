@@ -5,8 +5,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="reservations">Reservations</a></li>
-                <li class="active"><a href="">Devices</a></li>
-                <li><a href="classrooms">Classrooms</a></li>
+                <li class="active"><a href="/getalldevices">Devices</a></li>
+                <li><a href="/getallclassrooms">Classrooms</a></li>
                 <li><a href="account">Account</a></li>
                 <li><a href="">Logout</a></li>
             </ul>
@@ -23,44 +23,70 @@
         <div class="container">
           <table class="table table-striped">
             <thead>
+              <th>ID</th>
               <th>Name</th>
               <th>Model</th>
               <th>Condition</th>
-              <th>Reserved</th>
+              <th>Reserve</th>
             </thead>
+
+            <% if (userObjects){
+            if (userObjects[0].hasOwnProperty("DeviceID")){for(var i=0; i < userObjects.length; i++) { %>
+
             <tbody>
               <tr>
-                <td>ChromeBook1</td>
-                <td>Chrome Book</td>
-                <td>New</td>
-                <td>False</td>
+                <td><%= userObjects[i].DeviceID %></td>
+                <td><%= userObjects[i].DeviceName %></td>
+                <td><%= userObjects[i].DeviceModel %></td>
+                <td><%= userObjects[i].DeviceCondition %></td>
+                <td>
+                  <button type="button" class="open-reservedevice btn btn-sm" data-toggle="modal" data-target="#reserveDevice" data-device-name="<%= userObjects[i].DeviceName %>">Reserve</button>
+                </td>
+                <% }}}%>
               </tr>
             </tbody>
           </table>
     </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <% if (userObjects){
-      if (userObjects[0].hasOwnProperty("DeviceID")){for(var i=0; i < userObjects.length; i++) { %>
-      <h2>get_all_devices</h2>
-      <p>DeviceID:
-        <%= userObjects[i].DeviceID %>
-      </p>
-      <p>Device Model:
-        <%= userObjects[i].DeviceModel %>
-      </p>
-      <p>Device Condition:
-        <%= userObjects[i].DeviceCondition %>
-      </p>
-      <p>Device Name:
-        <%= userObjects[i].DeviceName %>
-      </p>
-      <br/>
-      <br/>
-      <% }}} %>
+<!-- Return Modal -->
+<div id="reserveDevice" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Reserve Device</h4> </div>
+      <div class="modal-body">
+        <p>You are reserving the following device:</p>
+
+        <div class="form-group">
+          <label for="deviceName">Device Name:</label>
+          <input type="text" class="form-control" name="deviceName" id="deviceName" readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="deviceReserveDate">Date Reserved:</label>
+          <input type="date" class="form-control" id="deviceReserveDate" name="deviceReserveDate">
+        </div>
+
+        <div class="form-group">
+          <label for="deviceReturnDate">Date Due:</label>
+          <input type="date" class="form-control" id="deviceReturnDate" name="deviceReturnDate">
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>
+
+<script src="/js/jquery.min.js"></script>
+<script>
+  $(document).on("click", ".open-reservedevice", function () {
+    var deviceName = $(this).data('device-name');
+    $(".modal-body #deviceName").val(deviceName);
+  });
+</script>

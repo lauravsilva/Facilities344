@@ -23,19 +23,25 @@
   <div class="container">
     <table class="table table-striped">
       <thead>
-      <th>Building</th>
-      <th>Room</th>
-      <th>Capacity</th>
-      <th>Reserved</th>
+        <th>ID</th>
+        <th>Building</th>
+        <th>Room</th>
+        <th>Capacity</th>
       </thead>
+
+      <% if (userObjects){
+      if (userObjects[0].hasOwnProperty("ClassroomID")){for(var i=0; i < userObjects.length; i++) { %>
+
       <tbody>
       <tr>
-        <td>Booth</td>
-        <td>1350</td>
-        <td>75</td>
-        <td>False</td>
+        <td><%= userObjects[i].ClassroomID %></td>
+        <td><%= userObjects[i].Building %></td>
+        <td><%= userObjects[i].RoomNumber %></td>
+        <td><%= userObjects[i].Capacity %></td>
       </tr>
       </tbody>
+
+      <% }}}%>
     </table>
   </div>
 </div>

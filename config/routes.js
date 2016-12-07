@@ -37,6 +37,9 @@ module.exports.routes = {
     }
     , 'get /reservations': {
         view: 'reservations'
+        , locals: {
+          userObjects: ''
+        }
     }
     , 'get /reservations-admin': {
         view: 'reservations-admin'
@@ -52,6 +55,9 @@ module.exports.routes = {
     }
     , 'get /classrooms': {
         view: 'classrooms'
+          , locals: {
+            userObjects: ''
+          }
     }
     , 'get /classrooms-admin': {
         view: 'classrooms-admin'
@@ -80,4 +86,9 @@ module.exports.routes = {
 
     //Device calls
     , '/getalldevices': 'HookController.get_all_devices'
+
+    //Classroom calls
+    , '/getallclassrooms': 'HookController.get_all_classrooms'
+
+
 };
