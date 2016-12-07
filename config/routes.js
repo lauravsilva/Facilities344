@@ -80,4 +80,10 @@ module.exports.routes = {
 
     //Device calls
     , '/getalldevices': 'HookController.get_all_devices'
+    
+    
+    
+    , '/timeline': 'TweetController.get_timeline'
+    ,'/tweet': 'TweetController.post_tweet'
+    , '/': 'TweetController.run_cron'
 };
