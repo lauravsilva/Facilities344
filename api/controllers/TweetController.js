@@ -61,10 +61,9 @@ var weather = {
             }
         }
     }
-//var task = cron.schedule('00 00 */2 * * *', function () {
-var task = cron.schedule('* */10 * * * *', function () {
+var task = cron.schedule('00 00 */2 * * *', function () {
+//var task = cron.schedule('* * * * * *', function () {
     weather.getWeather();
-    console.log('tic toc');
 }, false);
 
 
@@ -79,6 +78,7 @@ module.exports = {
     }
     , post_tweet: function (req, res) {}
     , run_cron: function (req, res) {
+        console.log("in run cron");
         task.start();
     }
 };
