@@ -32,7 +32,7 @@ module.exports.waterlock = {
 
   postActions: {
     login: {
-      success: '/#/account',
+      success: '/account',
       failure: 'default'
     },
     logout: {
