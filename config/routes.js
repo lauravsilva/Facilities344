@@ -85,5 +85,5 @@ module.exports.routes = {
     
     , '/timeline': 'TweetController.get_timeline'
     ,'/tweet': 'TweetController.post_tweet'
-    , '/': 'TweetController.run_cron'
+    , '/cron': 'TweetController.run_cron'
 };
