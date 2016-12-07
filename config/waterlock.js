@@ -9,7 +9,7 @@
  */
 module.exports.waterlock = {
 
-  baseUrl: 'http://facilities344.herokuapp.com/dashboard',
+  baseUrl: 'http://facilities344.herokuapp.com/',
 
   authMethod: [
     {
@@ -32,7 +32,7 @@ module.exports.waterlock = {
 
   postActions: {
     login: {
-      success: '/dashboard',
+      success: '/#/dashboard',
       failure: 'default'
     },
     logout: {
