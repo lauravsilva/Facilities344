@@ -8,11 +8,15 @@
  * http://waterlock.ninja/documentation
  */
 module.exports.waterlock = {
+
+  baseUrl: 'http://facilities344.herokuapp.com',
+
   authMethod: [
     {
        name: "waterlock-google-auth",
        clientId: "164515449157-gpth1s69l8nng33pfrcmhvefeg69knbd.apps.googleusercontent.com",
-       clientSecret: "LTqmAusrLqlZDorltvB8hT78"
+       clientSecret: "LTqmAusrLqlZDorltvB8hT78",
+       redirectUri: 'google'
     }
   ],
 
