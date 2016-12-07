@@ -20,7 +20,7 @@
 module.exports.policies = {
     '*': true,
 
-//    HookController: {
-//        '*': ['sessionAuth']
-//    }
+    HookController: {
+        //'*': ['sessionAuth']
+    }
 };
