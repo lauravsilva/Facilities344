@@ -16,7 +16,7 @@ module.exports.waterlock = {
        name: "waterlock-google-auth",
        clientId: "164515449157-gpth1s69l8nng33pfrcmhvefeg69knbd.apps.googleusercontent.com",
        clientSecret: "LTqmAusrLqlZDorltvB8hT78",
-       redirectUri: 'google'
+       redirectUri: 'http://facilities344.herokuapp.com'
     }
   ],
 
