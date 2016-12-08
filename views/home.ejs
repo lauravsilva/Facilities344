@@ -14,20 +14,47 @@
     </div>
 </nav>
 <div class="container">
-    <div class="jumbotron">
-        <h1>Welcome</h1>
-        <p>This will be the dashboard, what the user sees after login</p>
+    <h1>Welcome to Facilities</h1>
+    <div class="row cta">
+        <div class="col-md-6 cta-section">
+            <div class="cta-content">
+                <h2>Reserve a Device</h2>
+                <img src="img/laptop.png" alt="" class="cta-icon right">
+                <p>Ne pro dico elitr, et bonorum fabulas vim. Erat latine detracto cu vix. Pro ponderum lucilius et, brute causae ad nec. Sed ad mucius postulant. Te dico debet urbanitas mel. Nam graeco suscipit id.</p>
+            </div>
+        </div>
+        <div class="col-md-6 cta-section">
+            <div class="cta-content">
+                <h2>Reserve a Classroom</h2>
+                <img src="img/laptop.png" alt="" class="cta-icon right">
+                <p>Ea est audiam virtute, maiorum dissentias conclusionemque mei ut, ex vis dicit primis disputando. Dicant soleat torquatos in mel. Cu quo delenit facilisis dignissim, albucius mnesarchum mediocritatem sed ad. Pri id labore postulant, te natum eirmod dolorum eam. In vix dolore eruditi, id sit dicant nullam.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row cta">
+        <div class="col-md-6 cta-section">
+            <div class="cta-content">
+                <h2>See your Account</h2>
+                <img src="img/laptop.png" alt="" class="cta-icon right">
+                <p>Viderer efficiendi ex vim, nam eu facilis antiopam dignissim, possim scriptorem nam ut. Vix et eirmod malorum interpretaris. Sea no quaeque cotidieque reprehendunt, at nulla saepe dolores his, ea eos dolor nominati suscipiantur.</p>
+            </div>
+        </div>
+        <div class="col-md-6 cta-section">
+            <div class="cta-content">
+                <h2>System</h2>
+                <img src="img/laptop.png" alt="" class="cta-icon right">
+                <ul>
+                    <li><a href="">BookStore</a></li>
+                    <li><a href="">University Human Resources</a></li>
+                    <li><a href="">Student Enrollment System</a></li>
+                    <li><a href="">Co-op Evaluation</a></li>
+                    <li><a href="">Student Grading System</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <h2>System</h2>
-            <ul>
-                <li><a href="">BookStore</a></li>
-                <li><a href="">University Human Resources</a></li>
-                <li><a href="">Student Enrollment System</a></li>
-                <li><a href="">Co-op Evaluation</a></li>
-                <li><a href="">Student Grading System</a></li>
-            </ul>
             <% if (userObjects){
                 if (userObjects[0].hasOwnProperty("StudentID")){for(var i=0; i < userObjects.length; i++) { %>
                 <p>StudentID:

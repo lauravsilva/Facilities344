@@ -89,10 +89,4 @@ module.exports.routes = {
 
     //Classroom calls
     , '/getallclassrooms': 'HookController.get_all_classrooms'
-
-
-//    , '/timeline': 'TweetController.get_timeline'
-//    ,'/tweet': 'TweetController.post_tweet'
-    , '/cron': 'TweetController.run_cron'
-//    , 'get /index': 'TweetController.run_cron'
 };

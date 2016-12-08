@@ -48,6 +48,30 @@
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #FBFDFD;
 }
+.cta {
+  box-sizing: border-box;
+  display: table;
+}
+.cta-section {
+  height: 100%;
+  display: table-cell;
+  vertical-align: top;
+}
+.cta-content {
+  display: inline-block;
+  margin: 10px;
+  border-radius: 6px;
+  padding: 5px 15px 15px;
+  height: 100%;
+  width: 100%;
+}
+.right {
+  float: right;
+  margin-left: 15px;
+}
+.cta-icon {
+  width: 100px;
+}
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #545454;
@@ -112,6 +136,14 @@ a:hover {
 .btn:focus {
   color: #CAEBF2;
   border-color: #CAEBF2;
+}
+.btn.selected {
+  background: #A9A9A9;
+  color: white;
+}
+.btn.selected:hover {
+  color: white;
+  border: 3px solid #A9A9A9;
 }
 .jumbotron {
   background: #CAEBF2;
