@@ -86,6 +86,9 @@ module.exports.routes = {
 
     //Device calls
     , '/getalldevices': 'HookController.get_all_devices'
+    , '/getalldevices2': 'HookController.get_all_devices_2'
+    , '/getallreservations': 'HookController.get_all_reservations'
+    
 
     //Classroom calls
     , '/getallclassrooms': 'HookController.get_all_classrooms'
