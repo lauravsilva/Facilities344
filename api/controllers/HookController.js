@@ -41,6 +41,8 @@ function hookGlobal(res, pageview, path) {
 }
 
 function hookLocal(res, pageview, path) {
+  console.log("We've almost made it");
+
   var http = require('http');
   var options = {
     hostname: 'vm344c.se.rit.edu'
@@ -191,7 +193,12 @@ module.exports = {
         hookLocal(res, 'reservations', '/api/DeviceReservation.php?action=get_device_reservation_by_id&devicereservationid=' + req.param('devicereservationid'))
     }
     , create_device_reservation: function (req, res) {
-        hookLocal(res, 'reservations', '/api/DeviceReservation.php?action=create_device_reservation&userid=' + req.param('userid') + '&startdate' + req.param('startdate') + '&enddate=' + req.param('enddate'))
+        hookLocal(res, 'devices', '/api/DeviceReservation.php?action=create_device_reservation&userid=' + req.param('userid') + '&startdate' + req.param('startdate') + '&enddate=' + req.param('enddate'))
+        //console.log("We made it!");
+        //console.log(req.param('startdate'));
+    }
+    , remove_device_reservation: function (req, res) {
+        hookLocal(res, 'account', '/api/DeviceReservation.php?action=remove_device_reservation&devicereservationid=' + req.param('devicereservationid'))
     }
     , update_device_reservation: function (req, res) {
         hookLocal(res, 'reservations', '/api/DeviceReservation.php?action=update_device_reservation&devicereservationid=' + req.param('devicereservationid')
@@ -209,10 +216,13 @@ module.exports = {
         hookLocal(res, 'reservations', '/api/ClassReservation.php?action=create_class_reservation&instructorid=' + req.param('instructorid') + '&classid=' + req.param('classid') + '&startdate=' + req.param('startdate')
           + '&enddate=' + req.param('enddate') + '&classroomid=' + req.param('classroomid'))
     }
+    , remove_class_reservation: function (req, res) {
+        hookLocal(res, 'classrooms', '/api/ClassReservation.php?action=remove_class_reservation&classreservationid=' + req.param('classreservationid'))
+    }
     , update_class_reservation: function (req, res) {
         hookLocal(res, 'reservations', '/api/ClassReservation.php?action=update_class_reservation&classreservationid=' + req.param('classreservationid')
           + '&instructorid=' + req.param('instructorid') + '&classid=' + req.param('classid') + '&startdate=' + req.param('startdate')
-        + '&enddate=' + req.param('enddate') + '&classroomid=' + req.param('classroomid'))  
+        + '&enddate=' + req.param('enddate') + '&classroomid=' + req.param('classroomid'))
     }
 
 

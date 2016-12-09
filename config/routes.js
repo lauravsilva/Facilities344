@@ -22,6 +22,9 @@ module.exports.routes = {
    //Classroom calls
    , '/getallclassrooms': 'HookController.get_all_classrooms'
 
+   //Device Reservation calls
+   , '/createdevicereservation': 'HookController.create_device_reservation'
+
    // Routes for testing
    , '/email': 'HookController.get_user_by_email'
    , '/userid': 'HookController.get_user_by_id'
