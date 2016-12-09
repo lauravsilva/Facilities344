@@ -21,10 +21,10 @@ module.exports.policies = {
     '*': true,
 
     HookController: {
-//        '*': ['sessionAuth']
+        '*': ['sessionAuth']
     },
 
     RouteController: {
-//        '*': ['sessionAuth']
+        '*': ['sessionAuth']
     }
 };
