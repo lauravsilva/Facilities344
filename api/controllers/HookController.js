@@ -90,12 +90,12 @@ function apiCall(res, pageview, paths, dbType, callback) {
             url = 'http://vm344e.se.rit.edu';
             break;
         default:
-        	return;    
+        	return;
     }
 
     if (paths.constructor !== Array) {
         paths = [paths];
-    }  
+    }
 
     paths.forEach( function(path) {
 	    request(url + path, (error, response, body)=> {
@@ -227,7 +227,7 @@ module.exports = {
         hookLocal(res, 'reservations', '/api/ClassReservation.php?action=get_class_reservation_by_id&classreservationid=' + req.param('classreservationid'))
     }
     , create_class_reservation: function (req, res) {
-        hookLocal(res, 'reservations', '/api/ClassReservation.php?action=create_class_reservation&instructorid=' + req.param('instructorid') + '&classid=' + req.param('classid') + '&startdate=' + req.param('startdate')
+        hookLocal(res, 'classrooms', '/api/ClassReservation.php?action=create_class_reservation&instructorid=' + req.param('instructorid') + '&classid=' + req.param('classid') + '&startdate=' + req.param('startdate')
           + '&enddate=' + req.param('enddate') + '&classroomid=' + req.param('classroomid'))
     }
     , remove_class_reservation: function (req, res) {

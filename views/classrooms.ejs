@@ -4,9 +4,10 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="dashboard">Facilities</a> </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="devices">Devices</a></li>
-                <li><a href="classrooms">Classrooms</a></li>
-                <li><a href="account">Account</a></li>
+                <li><a href="/getalldevices">Devices</a></li>
+                <li><a href="/getallclassrooms">Classrooms</a></li>
+                <li><a href="/getalldevicereservations">Account</a></li>
+                <li><a hrefr="/getallclassroomreservations">Classroom Reservations</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
         </div>
@@ -79,7 +80,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="classStartDate">Start Date:</label>
+                    <label for="classReserveDate">Start Date:</label>
                     <input type="date" class="form-control" id="classReserveDate" name="classReserveDate">
                 </div>
 
@@ -89,8 +90,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="createClassReservation btn" name="makeClassReservation" id="makeClassReservation">
-                  <a href="/account">Create Reservation</a></button>
+                <button type="submit" class="createClassReservation btn" name="makeClassReservation" id="makeClassReservation">Create Reservation</button>
             </div>
         </div>
     </div>
