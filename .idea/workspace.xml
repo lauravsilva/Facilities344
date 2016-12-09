@@ -4,11 +4,7 @@
     <list default="true" id="d87e06ab-7c08-419f-8b75-1351d80844ff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/sqlitedb.sqlite" afterPath="$PROJECT_DIR$/.tmp/sqlitedb.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/styles/importer.css" afterPath="$PROJECT_DIR$/.tmp/public/styles/importer.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/account.ejs" afterPath="$PROJECT_DIR$/views/account.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/classrooms.ejs" afterPath="$PROJECT_DIR$/views/classrooms.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/devices.ejs" afterPath="$PROJECT_DIR$/views/devices.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/reservations.ejs" afterPath="$PROJECT_DIR$/views/reservations.ejs" />
     </list>
     <ignored path="344Facilities.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="HookController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HookController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/controllers/HookController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="439">
@@ -100,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classrooms.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="classrooms.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/classrooms.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
@@ -113,8 +109,8 @@
       <file leaf-file-name="account.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/account.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="10" selection-end-column="85" />
+            <state relative-caret-position="-359">
+              <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -162,10 +158,10 @@
         <option value="$PROJECT_DIR$/views/home.ejs" />
         <option value="$PROJECT_DIR$/config/routes.js" />
         <option value="$PROJECT_DIR$/api/controllers/HookController.js" />
-        <option value="$PROJECT_DIR$/views/account.ejs" />
         <option value="$PROJECT_DIR$/views/devices.ejs" />
         <option value="$PROJECT_DIR$/views/reservations.ejs" />
         <option value="$PROJECT_DIR$/views/classrooms.ejs" />
+        <option value="$PROJECT_DIR$/views/account.ejs" />
       </list>
     </option>
   </component>
@@ -549,7 +545,7 @@
       <workItem from="1478696564812" duration="15378000" />
       <workItem from="1480641087930" duration="1171000" />
       <workItem from="1480645267874" duration="14347000" />
-      <workItem from="1480904519404" duration="20543000" />
+      <workItem from="1480904519404" duration="22052000" />
     </task>
     <task id="LOCAL-00001" summary="Set up beginnings of device and classroom creation and created a table for devices to be displayed from.">
       <created>1478672283588</created>
@@ -600,11 +596,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481136163842</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Standardized navbar across all tabs">
+      <created>1481236904584</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1481236904584</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62187000" />
+    <option name="totallyTimeSpent" value="63696000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -617,9 +620,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1402" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18344308" sideWeight="0.49708575" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18344308" sideWeight="0.49708575" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972524" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46128225" sideWeight="0.50752586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32805994" sideWeight="0.49247414" order="7" side_tool="false" content_ui="tabs" />
@@ -712,7 +715,8 @@
     <MESSAGE value="Added local database hook calls to controller." />
     <MESSAGE value="Started to hook up api calls to front end." />
     <MESSAGE value="Made hook calls into one function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made hook calls into one function" />
+    <MESSAGE value="Standardized navbar across all tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Standardized navbar across all tabs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -821,20 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration/controllers/ClassroomReservationCalls.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration/controllers/DeviceReservationCalls.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/instructorclassid.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -854,32 +844,6 @@
     <entry file="file://$PROJECT_DIR$/views/devicecallstest.ejs" />
     <entry file="file://$PROJECT_DIR$/api/controllers/ClassroomController.js" />
     <entry file="file://$PROJECT_DIR$/api/controllers/ClassReservationController.js" />
-    <entry file="file://$PROJECT_DIR$/test/integration/controllers/GetRequests.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration/controllers/ClassroomCalls.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration/controllers/DeviceCalls.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/controllers/AuthController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -942,14 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/controllers/HookController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/devices.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -968,18 +924,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/account.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="10" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/classrooms.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/account.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-359">
+          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/controllers/DeviceReservationCalls.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/controllers/ClassroomReservationCalls.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/controllers/ClassroomCalls.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/controllers/DeviceCalls.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/controllers/GetRequests.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/HookController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
           <folding />
         </state>
       </provider>

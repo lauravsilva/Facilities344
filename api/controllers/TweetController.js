@@ -44,7 +44,7 @@ var weather = {
     }, //depending on weather, print different statements 
     decision: function (time, tempF, feelsLikeF, weatherDescription) {
         var textToTweet = "";
-        console.log(tempF, feelsLikeF);
+//        console.log(tempF, feelsLikeF);
         if (tempF < 40) {
             textToTweet += "Current Weather at RIT: " + tempF + "F, " + weatherDescription + ". Feels like: " + feelsLikeF + "F.";
             client.post('statuses/update', {
