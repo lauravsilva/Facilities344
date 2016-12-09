@@ -28,16 +28,16 @@
             <table class="table table-striped">
                 <thead class="th active">
                     <th>Device Name</th>
-                    <th>Quantity</th>
                     <th>Date Reserved</th>
+                    <th>Date Due</th>
                     <th>Reserve Condition</th>
                     <th></th>
                 </thead>
                 <tbody class="tb active">
                     <tr>
                         <td>Laptop</td>
-                        <td>1</td>
                         <td>1/1/16</td>
+                        <td>1/5/16</td>
                         <td>New</td>
                         <!-- Return Device Button -->
                         <td>
@@ -46,8 +46,8 @@
                     </tr>
                     <tr>
                         <td>Kindle</td>
-                        <td>1</td>
                         <td>1/1/16</td>
+                        <td>1/5/16</td>
                         <td>Screen Scratched</td>
                         <td>
                             <button type="button" class="open-returndevice btn btn-sm" data-toggle="modal" data-target="#returnDevice" data-device-name="Kindle">Return</button>
@@ -68,7 +68,7 @@
                 <h4 class="modal-title">Return Device</h4> </div>
             <div class="modal-body">
                 <p>You are returning a device.</p>
-                <input type="text" name="deviceName" id="deviceName" value="deviceName" readonly/> </div>
+                <b><output name="deviceName" id="deviceName"></output></b>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
