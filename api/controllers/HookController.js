@@ -90,13 +90,17 @@ function apiCall(res, pageview, paths, dbType, callback) {
             url = 'http://vm344e.se.rit.edu';
             break;
         default:
-        	return;
+        	return;    
     }
+
+    if (paths.constructor !== Array) {
+        paths = [paths];
+    }  
 
     paths.forEach( function(path) {
 	    request(url + path, (error, response, body)=> {
 	        if(!error && response.statusCode === 200) {
-	            json = body + ", ";
+	            json = JSON.parse(body);
 	            console.log("Got a response: ", body);
 	        } else {
 	            console.log("Got an error: ", error, ", status code: ", response.statusCode);
@@ -104,11 +108,13 @@ function apiCall(res, pageview, paths, dbType, callback) {
 	    });
 	});
 
-    json = json.slice(0, -2);
+    setTimeout(function() {
 
 	if (callback) {
 	    callback(res, pageview, json);
-	}
+	} else {
+        return json;
+    }}, 2000);
 }
 
 function insertJSON(res, pageview, json) {
@@ -140,9 +146,6 @@ module.exports = {
 
     //Local calls
     //Device calls
-    , get_all_devices_2: function (req, res) {
-        // apiCall(res, 'devices', ['/api/Device.php?action=get_all_devices'], 'local', insertJSON)
-    }
     , get_all_devices: function (req, res) {
         hookLocal(res, 'devices', '/api/Device.php?action=get_all_devices')
     }
@@ -158,6 +161,19 @@ module.exports = {
           + req.param('deviceid') + '&devicemodel=' + req.param('devicemodel')
           + '&devicename=' + req.param('devicename') + '&devicecondition=' + req.param('devicecondition'))
     }
+
+    , create_log: function (req, res) {
+        apiCall()
+    }
+
+    , get_all_students_in_class: function (req, res) {
+        apiCall(res, 'roster', '/api/StudentClass.php?action=get_students_by_class_id&classid=' + req.param('classid'), 'global', insertJSON)
+    }
+
+    , get_all_classes_by_id: function (req, res) {
+        apiCall(res, 'classlist', '/api/Course.php?action=get_courses_by_userid&userid=' + req.param('id'), 'global', insertJSON)
+    }
+
 
     //Classroom calls
     , get_all_classrooms: function (req, res) {
@@ -181,8 +197,6 @@ module.exports = {
     , get_all_reservations: function (req, res) {
     	  apiCall(res, 'account', ['/api/DeviceReservation.php?action=get_all_device_reservations', '/api/ClassReservation.php?action=get_all_class_reservations'], 'local', insertJSON)
     }
-
-
 
 
     //DeviceReservation calls
