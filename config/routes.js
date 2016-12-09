@@ -13,12 +13,12 @@ module.exports.routes = {
        }
    }
 
-//   , 'get /account': {
-//       view: 'account'
-//       , locals: {
-//           userObjects: ''
-//       }
-//   }
+   , 'get /account': {
+       view: 'account'
+       , locals: {
+           userObjects: ''
+       }
+   }
     , 'get /devices': {
       view: 'devices'
       , locals: {
