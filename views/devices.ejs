@@ -59,6 +59,7 @@
       <div class="modal-body">
         <p>You are reserving the following device:</p>
 
+
         <div class="form-group">
           <label for="deviceName">Device Name:</label>
           <input type="text" class="form-control" name="deviceName" id="deviceName" readonly>
@@ -81,8 +82,7 @@
 
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn" name="makeDeviceReservation" id="makeDeviceReservation">Create Reservation</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="createDeviceReservation btn" name="makeDeviceReservation" id="makeDeviceReservation">Create Reservation</button>
       </div>
     </div>
   </div>
@@ -93,5 +93,16 @@
   $(document).on("click", ".open-reservedevice", function () {
     var deviceName = $(this).data('device-name');
     $(".modal-body #deviceName").val(deviceName);
+  });
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script>
+  $(document).on("click", ".createDeviceReservation", function(){
+      var userID = document.getElementById("userID").value;
+      var deviceReserveDate = document.getElementById("deviceReserveDate").value;
+      var deviceReturnDate = document.getElementById("deviceReturnDate").value;
+      console.log(userID);
+      $.get('/createdevicereservation', {userid: userID, startdate: deviceReserveDate, enddate: deviceReturnDate} );
   });
 </script>
