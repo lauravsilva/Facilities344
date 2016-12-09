@@ -19,6 +19,12 @@ module.exports.routes = {
            userObjects: ''
        }
    }
+    , 'get /devices': {
+      view: 'devices'
+      , locals: {
+        userObjects: ''
+      }
+    }
    , '/account': 'RouteController.account'
    , '/dashboard': 'RouteController.dashboard'
    , '/logout': 'UserController.logout'
@@ -32,10 +38,15 @@ module.exports.routes = {
    //Device Reservation calls
    , '/createdevicereservation': 'HookController.create_device_reservation'
    , '/removedevicereservation': 'HookController.remove_device_reservation'
+   , '/getalldevicereservations': 'HookController.get_all_device_reservations'
 
    //Class Reservation calls
    , '/createclassreservation': 'HookController.create_class_reservation'
    , '/removeclassreservation': 'HookController.remove_class_reservation'
+   , '/getallclassreservations': 'HookController.get_all_class_reservations'
+
+   //Get all reservations
+   , '/getallreservations': 'HookController.get_all_reservations'
 
    // Routes for testing
    , '/email': 'HookController.get_user_by_email'

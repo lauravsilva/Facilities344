@@ -29,6 +29,8 @@
               <th>Reserve</th>
             </thead>
 
+            <% console.log("useronjoigtmlnhb" + userObjects[0]) %>
+
             <% if (userObjects){
             if (userObjects[0].hasOwnProperty("DeviceID")){for(var i=0; i < userObjects.length; i++) { %>
 
@@ -39,7 +41,9 @@
                 <td><%= userObjects[i].DeviceModel %></td>
                 <td><%= userObjects[i].DeviceCondition %></td>
                 <td>
-                  <button type="button" class="open-reservedevice btn btn-sm" data-toggle="modal" data-target="#reserveDevice" data-device-name="<%= userObjects[i].DeviceName %>">Reserve</button>
+                  <button type="button" class="open-reservedevice btn btn-sm" data-toggle="modal" data-target="#reserveDevice"
+                          data-device-name="<%= userObjects[i].DeviceName %>"
+                          data-device-id="<%= userObjects[i].DeviceID %>">Reserve</button>
                 </td>
                 <% }}}%>
               </tr>
@@ -59,6 +63,11 @@
       <div class="modal-body">
         <p>You are reserving the following device:</p>
 
+
+        <div class="form-group">
+          <label for="deviceID">Device ID:</label>
+          <input type="text" class="form-control" name="deviceID" id="deviceID" readonly>
+        </div>
 
         <div class="form-group">
           <label for="deviceName">Device Name:</label>
@@ -92,7 +101,9 @@
 <script>
   $(document).on("click", ".open-reservedevice", function () {
     var deviceName = $(this).data('device-name');
+    var deviceID = $(this).data('device-id');
     $(".modal-body #deviceName").val(deviceName);
+    $(".modal-body #deviceID").val(deviceID);
   });
 </script>
 
@@ -100,9 +111,9 @@
 <script>
   $(document).on("click", ".createDeviceReservation", function(){
       var userID = document.getElementById("userID").value;
+      var deviceID = document.getElementById("deviceID").value;
       var deviceReserveDate = document.getElementById("deviceReserveDate").value;
       var deviceReturnDate = document.getElementById("deviceReturnDate").value;
-      console.log(userID);
-      $.get('/createdevicereservation', {userid: userID, startdate: deviceReserveDate, enddate: deviceReturnDate} );
+      $.get('/createdevicereservation', {userid: userID, deviceid: deviceID, startdate: deviceReserveDate, enddate: deviceReturnDate} );
   });
 </script>

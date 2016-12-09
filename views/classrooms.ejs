@@ -44,7 +44,7 @@
                             <%= userObjects[i].Capacity %>
                         </td>
                         <td>
-                            <button type="button" class="open-reserveclass btn btn-sm" data-toggle="modal" data-target="#reserveClass" data-device-name="<%= userObjects[i].DeviceName %>">Reserve</button>
+                            <button type="button" class="open-reserveclass btn btn-sm" data-toggle="modal" data-target="#reserveClass" data-classroom-id="<%= userObjects[i].ClassroomID %>">Reserve</button>
                         </td>
                     </tr>
                 </tbody>
@@ -62,22 +62,35 @@
                 <h4 class="modal-title">Reserve Classroom</h4> </div>
             <div class="modal-body">
                 <p>You are reserving the following classroom:</p>
+
                 <div class="form-group">
-                    <label for="building">Building Name:</label>
-                    <input type="text" class="form-control" name="building" id="building"> </div>
+                  <label for="classroomID">Classroom ID:</label>
+                  <input type="text" class="form-control" name="classroomID" id="classroomID" readonly>
+                </div>
+
                 <div class="form-group">
-                    <label for="RoomNumber">Room Number:</label>
-                    <input type="text" class="form-control" name="RoomNumber" id="RoomNumber"> </div>
+                    <label for="instructorID">Instructor ID:</label>
+                    <input type="text" class="form-control" name="instructorID" id="instructorID">
+                </div>
+
+                <div class="form-group">
+                    <label for="classID">Class ID:</label>
+                    <input type="text" class="form-control" name="classID" id="classID">
+                </div>
+
                 <div class="form-group">
                     <label for="classStartDate">Start Date:</label>
-                    <input type="date" class="form-control" id="classReserveDate" name="classReserveDate"> </div>
+                    <input type="date" class="form-control" id="classReserveDate" name="classReserveDate">
+                </div>
+
                 <div class="form-group">
                     <label for="classEndDate">End Date:</label>
-                    <input type="date" class="form-control" id="classEndDate" name="classEndDate"> </div>
+                    <input type="date" class="form-control" id="classEndDate" name="classEndDate">
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn" name="makeClassReservation" id="makeClassReservation">Create Reservation</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="createClassReservation btn" name="makeClassReservation" id="makeClassReservation">
+                  <a href="/account">Create Reservation</a></button>
             </div>
         </div>
     </div>
@@ -85,7 +98,20 @@
 <script src="/js/jquery.min.js"></script>
 <script>
     $(document).on("click", ".open-reserveclass", function () {
-        var deviceName = $(this).data('device-name');
-        $(".modal-body #deviceName").val(deviceName);
+        var classroomID = $(this).data('classroom-id');
+        $(".modal-body #classroomID").val(classroomID);
     });
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script>
+  $(document).on("click", ".createClassReservation", function(){
+    var instructorID = document.getElementById("instructorID").value;
+    var classID = document.getElementById("classID").value;
+    var classReserveDate = document.getElementById("classReserveDate").value;
+    var classReturnDate = document.getElementById("classReturnDate").value;
+    var classroomID = document.getElementById("classroomID").value;
+    console.log(classroomID);
+    $.get('/createclassreservation', {instructorID: instructorID, classID: classID, classReserveDate: classReserveDate, classReturnDate: classReturnDate, classroomID: classroomID} );
+  });
 </script>
