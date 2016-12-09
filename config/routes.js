@@ -30,7 +30,7 @@ module.exports.routes = {
    , '/logout': 'UserController.logout'
 
    //Device calls
-   , '/devices': 'HookController.get_all_devices'
+   , '/getalldevices': 'HookController.get_all_devices'
 
    //Classroom calls
    , '/classrooms': 'HookController.get_all_classrooms'

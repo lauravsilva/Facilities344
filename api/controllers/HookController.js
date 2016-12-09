@@ -221,7 +221,7 @@ module.exports = {
 
     //ClassReservation calls
     , get_all_class_reservations: function (req, res) {
-        hookLocal(res, 'account', '/api/ClassReservation.php?action=get_all_class_reservations')
+        hookLocal(res, 'classReservations', '/api/ClassReservation.php?action=get_all_class_reservations')
     }
     , get_class_reservation_by_id: function (req, res) {
         hookLocal(res, 'reservations', '/api/ClassReservation.php?action=get_class_reservation_by_id&classreservationid=' + req.param('classreservationid'))
