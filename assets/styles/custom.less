@@ -45,33 +45,38 @@
     background-color: @lightgray;
 }
 
-.thumbnail{
-    &:hover{
+.thumbnail {
+    &:hover {
         border: 1px solid @watermelon;
     }
+}
+
+.container {
+    margin-bottom: 50px;
 }
 
 .cta {
     box-sizing: border-box;
     display: table;
-    margin-top: 40px; 
+    margin-top: 40px;
+    width: 100%;
 }
 
 .cta-section {
     height: 100%;
     display: table-cell;
     vertical-align: top;
-//    width: 50%;
+    max-width: 100%;
 }
 
 .cta-content {
     display: inline-block;
     margin: 10px;
-//    background: @sky;
+    //    background: @sky;
     border-radius: 6px;
     padding: 5px 15px 15px;
     height: 100%;
-//    width: 100%;
+    //    width: 100%;
 }
 
 .right {
@@ -83,9 +88,23 @@
     width: 100px;
 }
 
-
-.center-text{
+.center-text {
     text-align: center;
+}
+
+.twitter {
+    text-align: left;
+    margin: 30px 0 20px 0;
+    max-width: 50%;
+    float: left;
+}
+
+.thumbnail {
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
 }
 
 footer {}
