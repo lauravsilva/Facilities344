@@ -30,10 +30,13 @@ module.exports.routes = {
    , '/logout': 'UserController.logout'
 
    //Device calls
-   , '/getalldevices': 'HookController.get_all_devices'
+   , '/devices': 'HookController.get_all_devices'
 
    //Classroom calls
-   , '/getallclassrooms': 'HookController.get_all_classrooms'
+   , '/classrooms': 'HookController.get_all_classrooms'
+    
+    // Roster
+   , '/class/:id': 'HookController.get_all_students_in_class'
 
    //Device Reservation calls
    , '/createdevicereservation': 'HookController.create_device_reservation'
