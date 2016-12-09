@@ -6,12 +6,12 @@ module.exports.routes = {
    '/': {
        view: 'index'
    }
-   , 'get /reservations': {
-       view: 'reservations'
-       , locals: {
-         userObjects: ''
-       }
-   }
+   // , 'get /reservations': {
+   //     view: 'reservations'
+   //     , locals: {
+   //       userObjects: ''
+   //     }
+   // }
    , '/account': 'RouteController.account'
    , '/dashboard': 'RouteController.dashboard'
    , '/logout': 'UserController.logout'
@@ -28,7 +28,8 @@ module.exports.routes = {
    , '/instructorclassid': 'HookController.get_instructor_by_classid'
    , '/getallstudents': 'HookController.get_all_students'
    , '/getallinstructors': 'HookController.get_all_instructors'
-
+   , '/classes/:id' : 'HookController.get_all_classes_by_id'
+   , '/roster/:classid' : 'HookController.get_all_students_in_class'
 
    /* Admin routes ----------------------------------------------------
    , 'get /classrooms-admin': {

@@ -40,7 +40,7 @@ describe("Get Requests", function() {
 				if(err){
 					throw err;
 				};	
-				expect(res.text).to.contain("Get User By Email:");
+				expect(res.text).to.not.contain("Get User By Email:");
 				done();
 			});
 		});

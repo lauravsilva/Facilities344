@@ -23,24 +23,21 @@
         <div class="container">
           <table class="table table-striped">
             <thead>
-              <th>ID</th>
+              <th>Course ID</th>
               <th>Name</th>
-              <th>Model</th>
-              <th>Condition</th>
-              <th>Reserve</th>
+              <th>Description</th>
             </thead>
 
             <% if (userObjects){
-            if (userObjects[0].hasOwnProperty("DeviceID")){for(var i=0; i < userObjects.length; i++) { %>
+            if (userObjects[0].hasOwnProperty("CourseID")){for(var i=0; i < userObjects.length; i++) { %>
 
             <tbody>
               <tr>
-                <td><%= userObjects[i].DeviceID %></td>
-                <td><%= userObjects[i].DeviceName %></td>
-                <td><%= userObjects[i].DeviceModel %></td>
-                <td><%= userObjects[i].DeviceCondition %></td>
+                <td><%= userObjects[i].CourseID %></td>
+                <td><%= userObjects[i].Name %></td>
+                <td><%= userObjects[i].Description %></td>
                 <td>
-                  <button type="button" class="open-reservedevice btn btn-sm" data-toggle="modal" data-target="#reserveDevice" data-device-name="<%= userObjects[i].DeviceName %>">Reserve</button>
+                  <button type="button" class="open-reservedevice btn btn-sm" data-toggle="modal" data-target="#reserveDevice" data-device-name="<%= userObjects[i].DeviceName %>">See Roster</button>
                 </td>
                 <% }}}%>
               </tr>
@@ -48,51 +45,3 @@
           </table>
     </div>
 </div>
-
-<!-- Return Modal -->
-<div id="reserveDevice" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Reserve Device</h4> </div>
-      <div class="modal-body">
-        <p>You are reserving the following device:</p>
-
-        <div class="form-group">
-          <label for="deviceName">Device Name:</label>
-          <input type="text" class="form-control" name="deviceName" id="deviceName" readonly>
-        </div>
-
-        <div class="form-group">
-          <label for="userID">User ID:</label>
-          <input type="text" class="form-control" name="userID" id="userID">
-        </div>
-
-        <div class="form-group">
-          <label for="deviceReserveDate">Date Reserved:</label>
-          <input type="date" class="form-control" id="deviceReserveDate" name="deviceReserveDate">
-        </div>
-
-        <div class="form-group">
-          <label for="deviceReturnDate">Date Due:</label>
-          <input type="date" class="form-control" id="deviceReturnDate" name="deviceReturnDate">
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn" name="makeDeviceReservation" id="makeDeviceReservation">Create Reservation</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="/js/jquery.min.js"></script>
-<script>
-  $(document).on("click", ".open-reservedevice", function () {
-    var deviceName = $(this).data('device-name');
-    $(".modal-body #deviceName").val(deviceName);
-  });
-</script>
