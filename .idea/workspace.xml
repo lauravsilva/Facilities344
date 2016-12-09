@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87e06ab-7c08-419f-8b75-1351d80844ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/sqlitedb.sqlite" afterPath="$PROJECT_DIR$/.tmp/sqlitedb.sqlite" />
+    <list default="true" id="d87e06ab-7c08-419f-8b75-1351d80844ff" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.tmp/sqlitedb.sqlite&#10;#&#9;config/routes.js&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/344Facilities.iml" afterPath="$PROJECT_DIR$/.idea/344Facilities.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/styles/importer.css" afterPath="$PROJECT_DIR$/.tmp/public/styles/importer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/controllers/HookController.js" afterPath="$PROJECT_DIR$/api/controllers/HookController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.js" afterPath="$PROJECT_DIR$/config/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/devices.ejs" afterPath="$PROJECT_DIR$/views/devices.ejs" />
     </list>
     <ignored path="344Facilities.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="HookController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HookController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/controllers/HookController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
+            <state relative-caret-position="864">
               <caret line="219" column="151" lean-forward="false" selection-start-line="219" selection-start-column="151" selection-end-line="219" selection-end-column="151" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="25" column="74" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="74" />
+            <state relative-caret-position="650">
+              <caret line="30" column="72" lean-forward="false" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -65,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/views/devices.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="302">
-              <caret line="105" column="26" lean-forward="true" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
+              <caret line="105" column="26" lean-forward="false" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -76,7 +73,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1481261869424" expanded="true" signature="143:993" ph="{&quot;ejs&quot;: &quot;2.3.4&quot;...}" />
+                <marker date="1481261869424" expanded="true" signature="1008:1201" ph="{&quot;start&quot;: &quot;sails lift --models.migrate='safe'&quot;...}" />
+                <marker date="1481261869424" expanded="true" signature="1239:1320" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/views/reservations.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="8" column="65" lean-forward="true" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+              <caret line="8" column="65" lean-forward="false" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -155,9 +156,9 @@
         <option value="$PROJECT_DIR$/views/reservations.ejs" />
         <option value="$PROJECT_DIR$/views/classrooms.ejs" />
         <option value="$PROJECT_DIR$/views/account.ejs" />
-        <option value="$PROJECT_DIR$/config/routes.js" />
         <option value="$PROJECT_DIR$/views/devices.ejs" />
         <option value="$PROJECT_DIR$/api/controllers/HookController.js" />
+        <option value="$PROJECT_DIR$/config/routes.js" />
       </list>
     </option>
   </component>
@@ -324,6 +325,7 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="jsx.switch.disabled" value="true" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -339,9 +341,13 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/sqlitedb.sqlite</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/api/controllers/RouteController.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/views/classrooms.ejs</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/package.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/integration/controllers/GetRequests.test.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/views/403.ejs</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/views/404.ejs</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/views/500.ejs</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/views/userid.ejs</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -356,6 +362,25 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/bootstrap/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/bootstrap/bootstrap.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/favicon.ico</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/fonts/glyphicons-halflings-regular.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/fonts/glyphicons-halflings-regular.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/fonts/glyphicons-halflings-regular.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/fonts/glyphicons-halflings-regular.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/fonts/glyphicons-halflings-regular.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/img/classroom.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/img/classroom_placeholder.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/img/laptop.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/img/laptop_placeholder.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/img/placeholder.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/js/dependencies/sails.io.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/js/jquery.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/js/oauth.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/js/weather.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/robots.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/public/styles/importer.css</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -385,6 +410,8 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/sqlitedb.sqlite</PATH>
+        <PATH vcs="Git" revision="">$PROJECT_DIR$/config/routes.js</PATH>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Merged with tree conflicts" />
@@ -533,7 +560,7 @@
       <workItem from="1480641087930" duration="1171000" />
       <workItem from="1480645267874" duration="14347000" />
       <workItem from="1480904519404" duration="22052000" />
-      <workItem from="1481252415455" duration="8610000" />
+      <workItem from="1481252415455" duration="9094000" />
     </task>
     <task id="LOCAL-00001" summary="Set up beginnings of device and classroom creation and created a table for devices to be displayed from.">
       <created>1478672283588</created>
@@ -605,11 +632,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481254277343</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixing random shit.">
+      <created>1481261861925</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1481261861925</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72306000" />
+    <option name="totallyTimeSpent" value="72790000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -719,7 +753,8 @@
     <MESSAGE value="Made hook calls into one function" />
     <MESSAGE value="Standardized navbar across all tabs" />
     <MESSAGE value="Added hook calls and routes for both types of reservations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added hook calls and routes for both types of reservations." />
+    <MESSAGE value="Fixing random shit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing random shit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -870,7 +905,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1481261869424" expanded="true" signature="143:993" ph="{&quot;ejs&quot;: &quot;2.3.4&quot;...}" />
+            <marker date="1481261869424" expanded="true" signature="1008:1201" ph="{&quot;start&quot;: &quot;sails lift --models.migrate='safe'&quot;...}" />
+            <marker date="1481261869424" expanded="true" signature="1239:1320" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -948,15 +987,7 @@
     <entry file="file://$PROJECT_DIR$/views/reservations.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="8" column="65" lean-forward="true" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="25" column="74" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="74" />
+          <caret line="8" column="65" lean-forward="false" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -964,15 +995,23 @@
     <entry file="file://$PROJECT_DIR$/views/devices.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
-          <caret line="105" column="26" lean-forward="true" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
+          <caret line="105" column="26" lean-forward="false" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/controllers/HookController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
+        <state relative-caret-position="864">
           <caret line="219" column="151" lean-forward="false" selection-start-line="219" selection-start-column="151" selection-end-line="219" selection-end-column="151" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="30" column="72" lean-forward="false" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
           <folding />
         </state>
       </provider>

@@ -24,6 +24,11 @@ module.exports.routes = {
 
    //Device Reservation calls
    , '/createdevicereservation': 'HookController.create_device_reservation'
+   , '/removedevicereservation': 'HookController.remove_device_reservation'
+
+   //Class Reservation calls
+   , '/createclassreservation': 'HookController.create_class_reservation'
+   , '/removeclassreservation': 'HookController.remove_class_reservation'
 
    // Routes for testing
    , '/email': 'HookController.get_user_by_email'
