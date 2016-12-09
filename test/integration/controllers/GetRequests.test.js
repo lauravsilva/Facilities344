@@ -1,5 +1,5 @@
-//var url = 'https://facilities344.herokuapp.com';
-var url = 'http://localhost:1337';
+var url = 'https://facilities344.herokuapp.com';
+//var url = 'http://localhost:1337';
 var expect = require('expect.js');
 var request = require('supertest')(url);
 
