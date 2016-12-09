@@ -14,11 +14,6 @@ module.exports.routes = {
     }
     , '/account': 'RouteController.account'
     , '/dashboard': 'RouteController.dashboard'
-    , '/email': 'HookController.get_user_by_email'
-    , '/userid': 'HookController.get_user_by_id'
-    , '/instructorclassid': 'HookController.get_instructor_by_classid'
-    , '/getallstudents': 'HookController.get_all_students'
-    , '/getallinstructors': 'HookController.get_all_instructors'
     , '/logout': 'UserController.logout'
 
     //Device calls
@@ -27,6 +22,14 @@ module.exports.routes = {
     //Classroom calls
     , '/getallclassrooms': 'HookController.get_all_classrooms'
 
+    // Routes for testing
+    , '/email': 'HookController.get_user_by_email'
+    , '/userid': 'HookController.get_user_by_id'
+    , '/instructorclassid': 'HookController.get_instructor_by_classid'
+    , '/getallstudents': 'HookController.get_all_students'
+    , '/getallinstructors': 'HookController.get_all_instructors'
+    
+    
     /* Admin routes ----------------------------------------------------
     , 'get /classrooms-admin': {
         view: 'classrooms-admin'

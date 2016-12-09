@@ -5,7 +5,7 @@ var request = require('supertest')(url);
 describe("Get Requests", function() {
 	describe("Good Input", function() {
 		it("Get user by email", function(done) {
-			var req = request.get("/useremail?email=user@example.com");
+			var req = request.get("/email?email=user@example.com");
 			req.end(function(err,res){
 				if(err){
 					throw err;
