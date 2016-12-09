@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87e06ab-7c08-419f-8b75-1351d80844ff" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.tmp/sqlitedb.sqlite&#10;#&#9;config/routes.js&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/344Facilities.iml" afterPath="$PROJECT_DIR$/.idea/344Facilities.iml" />
+    <list default="true" id="d87e06ab-7c08-419f-8b75-1351d80844ff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.js" afterPath="$PROJECT_DIR$/config/routes.js" />
     </list>
     <ignored path="344Facilities.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -560,7 +558,7 @@
       <workItem from="1480641087930" duration="1171000" />
       <workItem from="1480645267874" duration="14347000" />
       <workItem from="1480904519404" duration="22052000" />
-      <workItem from="1481252415455" duration="9094000" />
+      <workItem from="1481252415455" duration="9112000" />
     </task>
     <task id="LOCAL-00001" summary="Set up beginnings of device and classroom creation and created a table for devices to be displayed from.">
       <created>1478672283588</created>
@@ -639,11 +637,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481261861925</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixing more shit">
+      <created>1481262267242</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1481262267242</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72790000" />
+    <option name="totallyTimeSpent" value="72808000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -754,7 +759,8 @@
     <MESSAGE value="Standardized navbar across all tabs" />
     <MESSAGE value="Added hook calls and routes for both types of reservations." />
     <MESSAGE value="Fixing random shit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing random shit." />
+    <MESSAGE value="Fixing more shit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing more shit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
