@@ -1,2 +1,2 @@
---timeout 500000
+--timeout 50000
 test/**/*.test.js
