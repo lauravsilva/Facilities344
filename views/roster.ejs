@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="dashboard">Facilities</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="reservations">Reservations</a></li>
+                <li class="active"><a href="/getalldevices">Devices</a></li>
+                <li><a href="/getallclassrooms">Classrooms</a></li>
+                <li><a href="account">Account</a></li>
+                <li><a href="" id="signOut" onclick="auth2.signOut()">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="page-header">
+        <h1>Roster <small>All Students</small></h1> </div>
+        <div class="row"/>
+        <div class="col-sm-12">
+            <p>Class Count: <%= userObjects.length  %></p>
+        </div>
+        <div class="container">
+          <table class="table table-striped">
+            <thead>
+              <th>First Name</th>
+              <th>Last Name</th>
+            </thead>
+
+            
+            <% if (userObjects){ if (userObjects[0].hasOwnProperty("UserID")){for(var i=0; i < userObjects.length; i++) { %>
+
+            <tbody>
+              <tr>
+                <td><%= userObjects[i].Firstname %></td>
+                <td><%= userObjects[i].Lastname %></td>
+                <% }}} %>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
