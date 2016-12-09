@@ -1,19 +1,20 @@
-var url = 'https://facilities344.herokuapp.com';
+//var url = 'https://facilities344.herokuapp.com';
+var url = 'http://localhost:1337';
 var expect = require('expect.js');
 var request = require('supertest')(url);
 
 describe("Get Requests", function() {
 	describe("Good Input", function() {
-//		it("Get user by email", function(done) {
-//			var req = request.get("/email?email=user@example.com");
-//			req.end(function(err,res){
-//				if(err){
-//					throw err;
-//				}
-//				expect(res.text).to.contain("37feb57ac")
-//				done();	
-//			});
-//		}),
+		it("Get user by email", function(done) {
+			var req = request.get("/email?email=user@example.com");
+			req.end(function(err,res){
+				if(err){
+					throw err;
+				}
+				expect(res.text).to.contain("37feb57ac")
+				done();	
+			});
+		}),
 		it("Get user by id", function(done) {
 			var req = request.get("/userid?id=3");
 			req.end(function(err,res){
@@ -40,29 +41,29 @@ describe("Get Requests", function() {
 				if(err){
 					throw err;
 				};	
-				expect(res.text).to.contain("Get User By Email:");
+				expect(res.text).to.contain("Welcome");
 				done();
 			});
 		});
-	}),
+	})
+        ,
 	describe("Bad format", function(){
 		it("Get user by email bad format", function(done) {
 			var req = request.get("/useremail?email=example");
 			req.end(function(err,res){
 				if(err){
-					throw err;
+                    expect(Constructor).to.throw(err);
 				}
-				expect(res.text).to.contain("Get User By Email:");
 				done();
 			});
-		}),
+		})
+            ,
 		it("Get user by id bad format", function(done) {
 			var req = request.get("/userid?id=string");
 			req.end(function(err,res){
 				if(err){
-					throw err;
+                    expect(Constructor).to.throw(err);
 				}
-				expect(res.text).to.contain("Get User By Email:");
 				done();
 			});
 		}),
@@ -70,73 +71,78 @@ describe("Get Requests", function() {
 			var req = request.get("/instructorclassid?id=string");
 			req.end(function(err,res){
 				if(err){
-					throw err;
+                    expect(Constructor).to.throw(err);
 				}
-				expect(res.text).to.contain("Get User By Email:");
 				done();
 			});
 		});
-	}),
+	})
+        ,
 	describe("Non-existent input", function(){
 		it("Get user by email bad format", function(done) {
 			var req = request.get("/useremail?email=hello@google.gov");
 			req.end(function(err,res){
 				if(err){
-					throw err;
+                    expect(Constructor).to.throw(err);
 				}
-				expect(res.text).to.contain("Get User By Email:");
 				done();
 			});
-		}),
+		})
+            ,
 		it("Get user by id bad format", function(done) {
 			var req = request.get("/userid?id=123456");
 			req.end(function(err,res){
+//                expect(res.text).to.be.a('number');
+//                expect(res.text % 1).to.be.equal(0)
 				if(err){
-					throw err;
+                    expect(res.text).to.throw(err);
 				}
-				expect(res.text).to.contain("Get User By Email:");
 				done();
 			});
-		}),
+		})
+            ,
 		it("Get instructor by id bad format", function(done) {
 			var req = request.get("/instructorclassid?id=123456");
 			req.end(function(err,res){
 				if(err){
-					throw err;
+                    expect(Constructor).to.throw(err);
 				}
-				expect(res.text).to.contain("Get User By Email:");
 				done();
 			});
 		});
-	}),
+	})
+        ,
 	describe("Whitespace input", function(){
-//		it("Get user by email bad format", function(done) {
-//			var req = request.get("/useremail?email=  ");
-//			req.end(function(err,res){
-//				if(err){
-//					throw err;
-//				}
-//				expect(res.text).to.contain("Get User By Email:");
-//				done();
-//			});
-//		}),
-		it("Get user by id bad format", function(done) {
-			var req = request.get("/userid?id=  ");
+		it("Get user by email bad format", function(done) {
+			var req = request.get("/useremail?email=  ");
 			req.end(function(err,res){
 				if(err){
 					throw err;
 				}
-				expect(res.text).to.contain("Get User By Email:");
+				expect(res.text).to.be.a('string');
 				done();
 			});
-		}),
+		})
+            ,
+		it("Get user by id bad format", function(done) {
+			var req = request.get("/userid?id= ");
+			req.end(function(err,res){
+//                console.log(res.text);
+				if(err){
+                    expect(Constructor).to.throw(err);
+//					throw err;
+				}
+				done();
+			});
+		})
+            ,
 		it("Get instructor by id bad format", function(done) {
 			var req = request.get("/instructorclassid?id=  ");
 			req.end(function(err,res){
 				if(err){
-					throw err;
+                    expect(Constructor).to.throw(err);
+//					throw err;
 				}
-				expect(res.text).to.contain("Get User By Email:");
 				done();
 			});
 		});

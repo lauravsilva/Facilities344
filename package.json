@@ -5,6 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "chai": "^3.5.0",
     "ejs": "2.3.4",
     "expect.js": "0.3.1",
     "grunt": "1.0.1",
