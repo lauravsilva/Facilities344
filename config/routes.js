@@ -12,6 +12,13 @@ module.exports.routes = {
          userObjects: ''
        }
    }
+
+   , 'get /account': {
+       view: 'account'
+       , locals: {
+           userObjects: ''
+       }
+   }
    , '/account': 'RouteController.account'
    , '/dashboard': 'RouteController.dashboard'
    , '/logout': 'UserController.logout'
