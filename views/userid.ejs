@@ -1,8 +1,10 @@
 <div>
-  <h1>UserID: <%= userObjects[0].UserID %></h1>
-  <h1>Email: <%= userObjects[0].Email %></h1>
-  <h1>Type: <%= userObjects[0].Type %></h1>
-  <h1>Firstname: <%= userObjects[0].Firstname %></h1>
-  <h1>Lastname: <%= userObjects[0].Lastname %></h1>
-  <h1>AuthToken: <%= userObjects[0].AuthToken %></h1>
+    <% if (userObjects){ %>
+        <h1>UserID: <%= userObjects[0].UserID %></h1>
+        <h1>Email: <%= userObjects[0].Email %></h1>
+        <h1>Type: <%= userObjects[0].Type %></h1>
+        <h1>Firstname: <%= userObjects[0].Firstname %></h1>
+        <h1>Lastname: <%= userObjects[0].Lastname %></h1>
+        <h1>AuthToken: <%= userObjects[0].AuthToken %></h1>
+        <% } %>
 </div>

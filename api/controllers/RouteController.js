@@ -37,7 +37,9 @@ module.exports = {
                 catch (e) {
                     sails.log.warn('Could not parse response from options.hostname: ' + e);
                 }
-                return res.view('account');
+                return res.view('account', {
+                    userObjects: data 
+                });
             });
         }).end();
     },

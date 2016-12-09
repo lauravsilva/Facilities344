@@ -2,33 +2,20 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="">Facilities</a> </div>
-        <div id="navbar" class="collapse navbar-collapse" style="display:none !important;">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="reservations">Reservations</a></li>
-                <li><a href="devices">Devices</a></li>
-                <li><a href="classrooms">Classrooms</a></li>
-                <li><a href="account">Account</a></li>
-                <li><a href="" id="signOut" onclick="auth2.signOut()">Logout</a></li>
-            </ul>
-        </div>
     </div>
 </nav>
 <div class="container">
     <div class="jumbotron">
-        <h1>Welcome</h1>
-        <p>This will be the index page, with login somewhere here</p>
+        <h1>RIT Facilities Pages</h1>
+        <p>View your classes, find your classrooms, checkout devices!</p>
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-6"> <a class="twitter-timeline" data-height="340" data-link-color="#FF3B3F" href="https://twitter.com/Facilities344">Tweets by Facilities344</a>
             <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-        <div class="col-sm-12 col-md-6">
-            <h2>Sign in with your Google account:</h2>
-            <div id="gConnect">
-                <div id="signin-button"></div>
-            </div>
-            <div id="authOps" style="display:none">
-                <h4>Sign-in success</h4> </div>
+        <div class="col-sm-12 col-md-6 center-text">
+            <h3>Sign in with your Google account</h3>
+            <a href="/auth/login" class="btn">Log In</a>
         </div>
     </div>
 </div>
